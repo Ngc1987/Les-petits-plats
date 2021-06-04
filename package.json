@@ -1,0 +1,20 @@
+{
+  "name": "thomassemeria_7_02062021",
+  "version": "1.0.0",
+  "description": "Projet 7 de la formation developpeur front-end de chez OpenClassRooms",
+  "main": "n",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/style.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ngc1987/ThomasSemeria_7_02062021.git"
+  },
+  "author": "Thomas Semeria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ngc1987/ThomasSemeria_7_02062021/issues"
+  },
+  "homepage": "https://github.com/Ngc1987/ThomasSemeria_7_02062021#readme"
+}
