@@ -103,6 +103,7 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   border-radius: 5px;
+  height: auto;
 }
 .filters__ingredients {
   background-color: #3282f7;
@@ -110,9 +111,8 @@ header {
   color: #fff;
   display: flex;
   flex-direction: column;
-  max-height: 397px;
-  height: auto;
   width: auto;
+  height: 69px;
 }
 .filters__ingredients__head {
   display: flex;
@@ -120,7 +120,7 @@ header {
   justify-content: space-between;
   align-items: center;
   min-width: 170px;
-  min-height: 69px;
+  height: 69px;
   margin: 0 10px;
   border-radius: 5px;
   color: #fff;
@@ -159,11 +159,12 @@ header {
   padding-left: 15px;
   margin-top: -10px;
   line-height: 2.5rem;
+  display: none;
 }
 .filters__ingredients__list-item {
   font-size: 1.5rem;
   list-style-type: none;
-  width: 170px;
+  width: 33%;
   max-height: 50px;
 }
 .filters__appareil {
@@ -172,10 +173,9 @@ header {
   color: #fff;
   display: flex;
   flex-direction: column;
-  max-height: 397px;
-  height: auto;
   width: auto;
   margin-left: 20px;
+  height: 69px;
 }
 .filters__appareil__head {
   display: flex;
@@ -183,7 +183,7 @@ header {
   justify-content: space-between;
   align-items: center;
   min-width: 170px;
-  min-height: 69px;
+  height: 69px;
   margin: 0 10px;
   border-radius: 5px;
   color: #fff;
@@ -218,15 +218,15 @@ header {
   flex-wrap: wrap;
   width: auto;
   max-width: 667px;
-  max-height: 397px;
   padding-left: 15px;
   margin-top: -10px;
   line-height: 2.5rem;
+  display: none;
 }
 .filters__appareil__list-item {
   font-size: 1.5rem;
   list-style-type: none;
-  width: 170px;
+  width: 33%;
   max-height: 50px;
 }
 .filters__ustensiles {
@@ -236,7 +236,6 @@ header {
   display: flex;
   flex-direction: column;
   max-height: 397px;
-  height: auto;
   width: auto;
   margin-left: 20px;
 }
@@ -246,7 +245,7 @@ header {
   justify-content: space-between;
   align-items: center;
   min-width: 170px;
-  min-height: 69px;
+  height: 69px;
   margin: 0 10px;
   border-radius: 5px;
   color: #fff;
@@ -285,12 +284,17 @@ header {
   padding-left: 15px;
   margin-top: -10px;
   line-height: 2.5rem;
+  transition: all 0.5s ease;
 }
 .filters__ustensiles__list-item {
   font-size: 1.5rem;
   list-style-type: none;
-  width: 170px;
+  width: 33%;
   max-height: 50px;
+}
+
+.hide {
+  display: none;
 }
 
 .recipes {

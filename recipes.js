@@ -1843,6 +1843,7 @@ recipes.forEach(recipe  => {
 //     "ustensils":["couteau", "verres"]
 // },
 
+// ******************************Tableau d'ingrédients**************************
 const ingredientsBigArray = [];
 
 function searchIngredients() {
@@ -1854,7 +1855,80 @@ function searchIngredients() {
 
     const ingredientsArray = new Set(ingredientsBigArray);
 
+    ingredientsArray.forEach(ingredient => {
+        const ingredientsList = document.querySelector(".filters__ingredients__list");
+        const li = document.createElement("li");
+        li.setAttribute("class", "filters__ingredients__list-item");
+        li.innerHTML = ingredient;
+        ingredientsList.appendChild(li);
+    })
+
     console.log(ingredientsArray);
 }
 
 searchIngredients();
+
+
+// ******************************Tableau d'appareils**************************
+
+const appliancesBigArray = [];
+
+function searchAppliances() {
+    recipes.forEach(recipe => {
+            appliancesBigArray.push(recipe.appliance)
+    })
+
+    const appliancesArray = new Set(appliancesBigArray);
+
+    appliancesArray.forEach(appliance => {
+        const appliancesList = document.querySelector(".filters__appareil__list");
+        const li = document.createElement("li");
+        li.setAttribute("class", "filters__appareils__list-item");
+        li.innerHTML = appliance;
+        appliancesList.appendChild(li);
+    })
+
+    console.log(appliancesArray);
+}
+
+searchAppliances();
+
+
+// ******************************Tableau d'ustensiles**************************
+const ustensilsBigArray = [];
+const ustensilsList = document.querySelector(".filters__ustensiles__list");
+
+function searchUstensils() {
+    recipes.forEach(recipe => {
+        recipe.ustensils.forEach(ustensil => {
+            ustensilsBigArray.push(ustensil)
+        })
+    })
+
+    const ustensilsArray = new Set(ustensilsBigArray);
+
+    ustensilsArray.forEach(ustensil => {
+        
+        const li = document.createElement("li");
+        li.setAttribute("class", "filters__ustensiles__list-item");
+        li.innerHTML = ustensil;
+        ustensilsList.appendChild(li);
+    })
+
+    console.log(ustensilsArray);
+}
+
+searchUstensils();
+
+const ustensilsInput = document.querySelector(".filters__ustensiles__head-input");
+const ustensilsArrow = document.querySelector(".filters__ustensiles__head-arrow");
+
+
+function showUstensils() {
+    ustensilsList.style.display = "flex";
+    console.log(ustensilsInput.value);
+}
+ustensilsInput.addEventListener("input", showUstensils);
+ustensilsArrow.addEventListener("click", showUstensils);
+
+
