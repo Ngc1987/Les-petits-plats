@@ -60,9 +60,23 @@ header {
         margin: 10px 0;
         font-size: 1.5rem;
         @extend .lato400;
+        transition: all 0.4s ease;
 
         &::placeholder {
             color: rgba(0, 0, 0, 0.37);
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 8px $primary,
+                        0px 0px 16px $primary,
+                        0px 0px 25px $primary;
+        }
+        &:focus {
+            box-shadow: 0px 0px 8px $primary,
+                        0px 0px 16px $primary,
+                        0px 0px 25px $primary;
+            outline-style: none;
+                      
         }
     }
 
@@ -72,34 +86,240 @@ header {
         top: 30px;
         font-size: 2.5rem;
         font-weight: lighter;
+        cursor: pointer;
     }
 }
+.animOpen {
+    animation: animOpen 0.6s forwards;
+}
+
+@keyframes animOpen {
+    0% {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        width: 667px;
+        height: auto;
+        opacity: 1;
+    }
+}
+.animClose {
+    animation: animClose 0.9s forwards;
+}
+
+@keyframes animClose {
+    
+    0% {
+        visibility: visible;
+        width: 667px;
+        height: auto;
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+.tagAnim {
+    animation: tagAnim 1.2s cubic-bezier(0.09, 0.65, 0.29, 0.96) forwards;
+}
+
+@keyframes tagAnim {
+    0% {
+        transform: scale(0.5);
+    }
+    30% {
+        transform: scale(0.96);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 .tag {
     display: flex;
     flex-direction: row;
-    margin-top: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
 
-    &__item {
+    &__blue {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        min-width: 107px;
-        width: auto;
-        height: 37px;
-        padding: 0 10px;
-        margin-right: 20px;
-        background-color: $secondary;
-        color: #fff;
-        font-size: 1.2rem;
-        border-radius: 5px;
-        @extend .lato700;
+        flex-wrap: wrap;
+        
+        &__item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            min-width: 107px;
+            width: auto;
+            height: 37px;
+            padding: 0 10px;
+            margin-right: 20px;
+            margin-top: 12px;
+            background-color: $secondary;
+            color: #fff;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            // transform: translateX(10px);
+            @extend .lato700;
+            transition: all 0.4s ease;
+            // transform: scale(1);
 
-        i {
-            font-size: 1.8rem;
-            margin-left: 10px;
-            cursor: pointer;
+            &:hover {
+                box-shadow: 0px 0px 3px $secondary,
+                            0px 0px 6px $secondary,
+                            0px 0px 9px $primary;
+                            transform: scale(1.02);          
+                        }
+            &:focus {
+                box-shadow: 0px 0px 3px $secondary,
+                            0px 0px 6px $secondary,
+                            0px 0px 9px $primary;
+            }
+
+            i {
+                font-size: 1.8rem;
+                margin-left: 10px;
+                cursor: pointer;
+                transition: all 0.4s ease;
+                background-color: transparent;
+                border-radius: 50%;
+            // transform: scale(1);
+            
+                &:hover {
+                box-shadow: 0px 0px 10px white,
+                            0px 0px 20px $primary,
+                            0px 0px 30px $primary,
+                        inset    0px 0px 3px white,
+                        inset    0px 0px 6px $primary,
+                        inset    0px 0px 9px $primary;
+                            // transform: scale(1.05);          
+                }
+            }
+        }
+    }
+    &__green {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &__item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            min-width: 107px;
+            width: auto;
+            height: 37px;
+            padding: 0 10px;
+            margin-right: 20px;
+            margin-top: 12px;
+            background-color: $tertiary;
+            color: #fff;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            @extend .lato700;
+            transition: all 0.4s ease;
+
+            &:hover {
+                box-shadow: 0px 0px 3px $tertiary,
+                            0px 0px 6px $tertiary,
+                            0px 0px 9px $primary;
+            }
+            &:focus {
+                box-shadow: 0px 0px 3px $tertiary,
+                            0px 0px 6px $tertiary,
+                            0px 0px 9px $primary;
+            }
+
+            i {
+                font-size: 1.8rem;
+                margin-left: 10px;
+                cursor: pointer;
+                transition: all 0.4s ease;
+                background-color: transparent;
+                border-radius: 50%;
+            // transform: scale(1);
+            
+                &:hover {
+                box-shadow: 0px 0px 10px white,
+                            0px 0px 20px $primary,
+                            0px 0px 30px $primary,
+                        inset    0px 0px 3px white,
+                        inset    0px 0px 6px $primary,
+                        inset    0px 0px 9px $primary;
+                            // transform: scale(1.05);          
+                }
+            }
+        }
+    }
+    &__red {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &__item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            min-width: 107px;
+            width: auto;
+            height: 37px;
+            padding: 0 10px;
+            margin-right: 20px;
+            margin-top: 12px;
+            background-color: $quartiary;
+            color: #fff;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            @extend .lato700;
+            transition: all 0.4s ease;
+
+            &:hover {
+                box-shadow: 0px 0px 3px $quartiary,
+                            0px 0px 6px $quartiary,
+                            0px 0px 9px $primary;
+            }
+            &:focus {
+                box-shadow: 0px 0px 3px $quartiary,
+                            0px 0px 6px $quartiary,
+                            0px 0px 9px $primary;
+            }
+
+            i {
+                font-size: 1.8rem;
+                margin-left: 10px;
+                cursor: pointer;
+                transition: all 0.4s ease;
+                background-color: transparent;
+                border-radius: 50%;
+            // transform: scale(1);
+            
+                &:hover {
+                box-shadow: 0px 0px 10px white,
+                            0px 0px 20px $primary,
+                            0px 0px 30px $primary,
+                        inset    0px 0px 3px white,
+                        inset    0px 0px 6px $primary,
+                        inset    0px 0px 9px $primary;
+                            // transform: scale(1.05);          
+                }
+            }
         }
     }
 }
@@ -119,7 +339,21 @@ header {
         display: flex;
         flex-direction: column;
         width: auto;
-        height: 69px;
+        height: max-content;
+        cursor: pointer;
+        transition: all 0.4s ease;
+
+        &:hover {
+            box-shadow: 0px 0px 5px $secondary,
+                        0px 0px 10px $secondary,
+                        0px 0px 15px $secondary;
+        }
+        // &:focus {
+        //     box-shadow: 0px 0px 5px $secondary,
+        //                 0px 0px 10px $secondary,
+        //                 0px 0px 15px $secondary;
+        //                 transform: scale(1.2);
+        // }
 
         &__head {
             display: flex;
@@ -167,14 +401,19 @@ header {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
-            width: auto;
-            max-width: 667px;
-            max-height: 397px;
+            // width: auto;
+            // max-width: 667px;
+            // max-height: 397px;
             padding-left: 15px;
             margin-top: -10px;
             line-height: 2.5rem;
 
-            display: none;
+            // display: none;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+            transition: all 0.5s;
+            // z-index: 1;
 
             &-item {
                 @extend .lato400;
@@ -183,6 +422,8 @@ header {
                 width: 33%;
                 // padding-bottom: 5px;
                 max-height: 50px;
+                cursor: pointer;
+                // z-index: 10000;
                 
             }
         }
@@ -193,10 +434,20 @@ header {
         color: #fff;
         display: flex;
         flex-direction: column;
-        // max-height: 397px;
+        height: max-content;
         width: auto;
-        margin-left: 20px;
-        height: 69px;
+        margin-left: 20px;transition: all 0.4s ease;
+
+        &:hover {
+            box-shadow: 0px 0px 5px $tertiary,
+                        0px 0px 10px $tertiary,
+                        0px 0px 15px $tertiary;
+        }
+        &:focus {
+            box-shadow: 0px 0px 5px $tertiary,
+                        0px 0px 10px $tertiary,
+                        0px 0px 15px $tertiary;
+        }
 
         &__head {
             display: flex;
@@ -244,14 +495,18 @@ header {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
-            width: auto;
-            max-width: 667px;
+            // width: auto;
+            // max-width: 667px;
             // max-height: 397px;
             padding-left: 15px;
             margin-top: -10px;
             line-height: 2.5rem;
 
-            display: none;
+            // display: none;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+            transition: all 0.5s;
 
             &-item {
                 @extend .lato400;
@@ -260,6 +515,7 @@ header {
                 width: 33%;
                 // padding-bottom: 5px;
                 max-height: 50px;
+                cursor: pointer;
                 
             }
         }
@@ -270,9 +526,20 @@ header {
         color: #fff;
         display: flex;
         flex-direction: column;
-        max-height: 397px;
+        height: max-content;
         width: auto;
-        margin-left: 20px;
+        margin-left: 20px;transition: all 0.4s ease;
+
+        &:hover {
+            box-shadow: 0px 0px 5px $quartiary,
+                        0px 0px 10px $quartiary,
+                        0px 0px 15px $quartiary;
+        }
+        &:focus {
+            box-shadow: 0px 0px 5px $quartiary,
+                        0px 0px 10px $quartiary,
+                        0px 0px 15px $quartiary;
+        }
 
         &__head {
             display: flex;
@@ -320,15 +587,24 @@ header {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
-            width: auto;
-            max-width: 667px;
-            max-height: 397px;
+            background-color: $quartiary;
+            color: #fff;
+            // width: auto;
+            // max-width: 667px;
+            // max-height: 397px;
             padding-left: 15px;
             margin-top: -10px;
             line-height: 2.5rem;
             transition: all 0.5s ease;
 
+            // height: 0;
+            // width: 0;
+            // overflow: hidden;
+
             // display: none;
+            visibility: hidden;
+            width: 0;
+            height: 0;
 
             &-item {
                 @extend .lato400;
@@ -337,14 +613,23 @@ header {
                 width: 33%;
                 // padding-bottom: 5px;
                 max-height: 50px;
+                cursor: pointer;
                 
             }
         }
     }
 }
-.hide {
-    display: none;
-}
+
+// .show {
+//     max-width: 667px;
+//     max-height: 397px;
+//     height: unset;
+//     width: unset;
+//     overflow: unset;
+// }
+// .hide {
+//     display: none;
+// }
 .recipes {
     display: flex;
     flex-direction: row;
@@ -354,11 +639,29 @@ header {
 
     &__sample {
         width: 380px;
-        min-height: 360px;
+        height: 360px;
         display: flex;
         flex-direction: column;
         border-radius: 5px;
         margin-bottom: 50px;
+        transition: all 0.4s ease;
+        transform: translateY() rotate(0deg);
+        box-shadow: -2px 5px 10px #a39b9b,
+                    -2px 5px 20px $primary,
+                    -2px 5px 30px $primary;
+
+        &:hover {
+            box-shadow: -7px 10px 10px #a39b9b,
+                        -7px 10px 20px $primary,
+                        -7px 10px 30px $primary;
+                        transform: translateY(-10px) rotate(-1deg);
+        }
+        &:focus {
+            box-shadow: -7px 10px 10px #8d8686,
+                        -7px 10px 20px $primary,
+                        -7px 10px 30px $primary;
+                        transform: translateY(-10px);
+        }
 
         &__head {
             background-color: #c7bebe;
@@ -373,7 +676,11 @@ header {
             background-color: $primary;
             border-bottom-right-radius: 5px;
             border-bottom-left-radius: 5px;
-            min-height: 186px;
+            height: 186px;
+            width: 380px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
 
             &-title {
                 padding-left: 20px;
@@ -415,8 +722,8 @@ header {
                     flex-direction: row;
                     height: 15px;
                     // overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
+                    // text-overflow: ellipsis;
+                    // white-space: nowrap;
                     // line-height: 0.2;
                 }
 
@@ -438,10 +745,7 @@ header {
                     font-variation-settings: 'wght' 600;
                     line-height: 1;
                     margin-top: 15px;
-                    width: 45%;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: normal;
+                    width: 190px;
                 }
             }
         }

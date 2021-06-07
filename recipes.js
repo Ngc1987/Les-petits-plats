@@ -1809,42 +1809,16 @@ recipes.forEach(recipe  => {
 
     
 })
-// {
-//     "id": 49,
-//     "name": "Smoothie tropical",
-//     "servings": 4,
-//     "ingredients": [
-//         {
-//             "ingredient": "Bananes",
-//             "quantity": 2
-//         },
-//         {
-//             "ingredient": "Kiwis",
-//             "quantity": 3
-//         },
-//         {
-//             "ingredient": "Mangue",
-//             "quantity": 1
-//         },
-//         {
-//             "ingredient": "Ananas",
-//             "quantity": 4,
-//             "unit":"tranches"
-//         },
-//         {
-//             "ingredient": "Miel",
-//             "quantity": 2,
-//             "unit": "cuillères à soupe"
-//         }
-//     ],
-//     "time": 0,
-//     "description":"Découper les fruits. Le passer au blender jusqu'à obtenir une texture liquide. Mettre au frais. Servir",
-//     "appliance": "Blender",
-//     "ustensils":["couteau", "verres"]
-// },
 
+const filtersUstensilsDiv = document.querySelector(".filters__ustensiles");
+const filtersAppliancesDiv = document.querySelector(".filters__appareil");
+const filtersIngredientsDiv = document.querySelector(".filters__ingredients");
+
+// ****************************************************************************
 // ******************************Tableau d'ingrédients**************************
+// ****************************************************************************
 const ingredientsBigArray = [];
+const ingredientsList = document.querySelector(".filters__ingredients__list");
 
 function searchIngredients() {
     recipes.forEach(recipe => {
@@ -1856,7 +1830,7 @@ function searchIngredients() {
     const ingredientsArray = new Set(ingredientsBigArray);
 
     ingredientsArray.forEach(ingredient => {
-        const ingredientsList = document.querySelector(".filters__ingredients__list");
+        
         const li = document.createElement("li");
         li.setAttribute("class", "filters__ingredients__list-item");
         li.innerHTML = ingredient;
@@ -1868,10 +1842,74 @@ function searchIngredients() {
 
 searchIngredients();
 
+const ingredientsInput = document.querySelector(".filters__ingredients__head-input");
+const ingredientsArrow = document.querySelector(".filters__ingredients__head-arrow");
 
+
+function showIngredients() {
+    // ingredientsList.style.display = "flex";
+    appliancesList.style.height = "0";
+    ustensilsList.style.height = "0";
+    appliancesList.style.width = "0";
+    ustensilsList.style.width = "0";
+    appliancesList.style.visibility = "hidden";
+    ustensilsList.style.visibility = "hidden";
+    // ingredientsInput.style.marginTop = "23px";
+    // ingredientsArrow.style.marginTop = "23px";
+    // ingredientsList.style.marginTop = "23px";
+    // appliancesList.style.maxHeight = "397px"
+    // appliancesList.style.maxWidth = "667px";
+    // ingredientsList.style.visibility = "visible";
+    // ingredientsList.style.width = "667px";
+    // ingredientsList.style.height = "auto";
+    // console.log(appliancesInput.value);
+    ingredientsList.classList.remove("animClose");
+    ingredientsList.classList.add("animOpen");
+}
+function hideIngredients() {
+    // ingredientsList.style.display = "none";
+    // filtersUstensilsDiv.style.maxHeight = "397px";
+    // filtersAppliancesDiv.style.maxHeight = "397px";
+    // ingredientsList.style.width = "0px";
+    // ingredientsList.style.height = "0px";
+    // ingredientsList.style.visibility = "hidden";
+    ingredientsList.classList.remove("animOpen");
+    ingredientsList.classList.add("animClose");
+    // ingredientsInput.style.marginTop = "0px";
+    // ingredientsArrow.style.marginTop = "0px";
+    // ingredientsList.style.marginTop = "0px";
+
+    
+    // console.log(appliancesInput.value);
+}
+document.addEventListener("click", function(e) {
+    if (!e.target.classList.contains('filters__ingredients__list-item') && !e.target.classList.contains('filters__ingredients__head-input')) {
+        // e.preventDefault();
+        // e.stopPropagation();
+        hideIngredients();
+        // console.log(e.target.innerText);
+        // createNewTag(e.target.innerText);
+    }
+
+    if (e.target.classList.contains('filters__ingredients__head-input')) {
+        showIngredients();
+    }
+})
+
+
+ingredientsInput.addEventListener("focus", showIngredients);
+// ingredientsInput.addEventListener("blur", hideIngredients);
+ingredientsArrow.addEventListener("click", showIngredients);
+
+
+
+
+// ****************************************************************************
 // ******************************Tableau d'appareils**************************
+// ****************************************************************************
 
 const appliancesBigArray = [];
+const appliancesList = document.querySelector(".filters__appareil__list");
 
 function searchAppliances() {
     recipes.forEach(recipe => {
@@ -1881,9 +1919,9 @@ function searchAppliances() {
     const appliancesArray = new Set(appliancesBigArray);
 
     appliancesArray.forEach(appliance => {
-        const appliancesList = document.querySelector(".filters__appareil__list");
+        
         const li = document.createElement("li");
-        li.setAttribute("class", "filters__appareils__list-item");
+        li.setAttribute("class", "filters__appareil__list-item");
         li.innerHTML = appliance;
         appliancesList.appendChild(li);
     })
@@ -1893,8 +1931,66 @@ function searchAppliances() {
 
 searchAppliances();
 
+const appliancesInput = document.querySelector(".filters__appareil__head-input");
+const appliancesArrow = document.querySelector(".filters__appareil__head-arrow");
 
+
+function showAppliances() {
+    ingredientsList.style.height = "0";
+    ustensilsList.style.height = "0";
+    ingredientsList.style.width = "0";
+    ustensilsList.style.width = "0";
+    ingredientsList.style.visibility = "hidden";
+    ustensilsList.style.visibility = "hidden";
+    // ingredientsInput.style.marginTop = "23px";
+    // ingredientsArrow.style.marginTop = "23px";
+    // ingredientsList.style.marginTop = "23px";
+    // appliancesList.style.maxHeight = "397px"
+    // appliancesList.style.maxWidth = "667px";
+    // appliancesList.style.visibility = "visible";
+    // appliancesList.style.width = "667px";
+    // appliancesList.style.height = "auto";
+    appliancesList.classList.remove("animClose");
+    appliancesList.classList.add("animOpen");
+}
+function hideAppliances() {
+    // ingredientsList.style.display = "none";
+    // filtersUstensilsDiv.style.maxHeight = "397px";
+    // filtersAppliancesDiv.style.maxHeight = "397px";
+
+    // appliancesList.style.width = "0px";
+    // appliancesList.style.height = "0px";
+    // appliancesList.style.visibility = "hidden";
+    appliancesList.classList.remove("animOpen");
+    appliancesList.classList.add("animClose");
+
+    // ingredientsInput.style.marginTop = "0px";
+    // ingredientsArrow.style.marginTop = "0px";
+    // ingredientsList.style.marginTop = "0px";
+
+    
+    // console.log(appliancesInput.value);
+}
+document.addEventListener("click", function(e) {
+    if (!e.target.classList.contains('filters__appareil__list-item') && !e.target.classList.contains('filters__appareil__head-input')) {
+        // e.preventDefault();
+        // e.stopPropagation();
+        hideAppliances();
+        // console.log(e.target.innerText);
+        // createNewTag(e.target.innerText);
+    }
+
+    if (e.target.classList.contains('filters__appareil__head-input')) {
+        showAppliances();
+    }
+})
+appliancesInput.addEventListener("focus", showAppliances);
+// appliancesInput.addEventListener("blur", hideAppliances);
+appliancesArrow.addEventListener("click", showAppliances);
+
+// ****************************************************************************
 // ******************************Tableau d'ustensiles**************************
+// ****************************************************************************
 const ustensilsBigArray = [];
 const ustensilsList = document.querySelector(".filters__ustensiles__list");
 
@@ -1924,11 +2020,212 @@ const ustensilsInput = document.querySelector(".filters__ustensiles__head-input"
 const ustensilsArrow = document.querySelector(".filters__ustensiles__head-arrow");
 
 
-function showUstensils() {
-    ustensilsList.style.display = "flex";
-    console.log(ustensilsInput.value);
+ustensilsArrow.addEventListener("click", ustennss)
+function ustennss(){
+    if(ustensilsList.classList.contains("animClose")) {
+        ustensilsList.classList.remove("animClose");
+        ustensilsList.classList.add("animOpen");
+    } else if (ustensilsList.classList.contains("animOpen")) {
+        ustensilsList.classList.remove("animOpen");
+        ustensilsList.classList.add("animClose");
+    }
 }
-ustensilsInput.addEventListener("input", showUstensils);
+
+function showUstensils() {
+    ingredientsList.style.height = "0";
+    appliancesList.style.height = "0";
+    ingredientsList.style.width = "0";
+    appliancesList.style.width = "0";
+    ingredientsList.style.visibility = "hidden";
+    appliancesList.style.visibility = "hidden";
+    // ingredientsInput.style.marginTop = "23px";
+    // ingredientsArrow.style.marginTop = "23px";
+    // ingredientsList.style.marginTop = "23px";
+    // appliancesList.style.maxHeight = "397px"
+    // appliancesList.style.maxWidth = "667px";
+    // ustensilsList.style.visibility = "visible";
+    // ustensilsList.style.width = "667px";
+    // ustensilsList.style.height = "auto";
+    ustensilsList.classList.remove("animClose");
+    ustensilsList.classList.add("animOpen");
+}
+function hideUstensils() {
+    // ingredientsList.style.display = "none";
+    // filtersUstensilsDiv.style.maxHeight = "397px";
+    // filtersAppliancesDiv.style.maxHeight = "397px";
+    // ustensilsList.style.width = "0px";
+    // ustensilsList.style.height = "0px";
+    // ustensilsList.style.visibility = "hidden";
+    // ingredientsInput.style.marginTop = "0px";
+    // ingredientsArrow.style.marginTop = "0px";
+    // ingredientsList.style.marginTop = "0px";
+    ustensilsList.classList.remove("animOpen");
+    ustensilsList.classList.add("animClose");
+}
+ustensilsInput.addEventListener("focus", showUstensils);
+// ustensilsInput.addEventListener("blur", hideUstensils);
 ustensilsArrow.addEventListener("click", showUstensils);
 
 
+document.addEventListener("click", function(e) {
+    if (!e.target.classList.contains('filters__ustensiles__list-item') && !e.target.classList.contains('filters__ustensiles__head-input')) {
+        // e.preventDefault();
+        // e.stopPropagation();
+        hideUstensils();
+        // console.log(e.target.innerText);
+        // createNewTag(e.target.innerText);
+    }
+
+    if (e.target.classList.contains('filters__ustensiles__head')) {
+        showUstensils();
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+const input = document.querySelector(".search__input");
+
+const enterButton = document.querySelector(".search__logo");
+
+
+let nouveauTag = input.value  ;
+
+
+function createNewTag(tagChoisi, color) {
+
+    const tagList = document.querySelector(`.tag__${color}`);
+    let nouveauTag = tagChoisi;
+
+    let tag = document.createElement("div");
+    tag.setAttribute("class", "tag__" + color + "__item");
+    tag.classList.add("tagAnim");
+
+    let tagName = document.createElement("p");
+    tagName.appendChild(document.createTextNode(tagChoisi));
+
+    let deleteButton = document.createElement("i");
+    deleteButton.setAttribute("class", "far fa-times-circle");
+
+
+
+    tag.appendChild(tagName);
+    tag.appendChild(deleteButton);
+    tagList.appendChild(tag);
+
+    input.value = "";
+
+    deleteButton.addEventListener("click", deleteTag)
+
+    function deleteTag() {
+        
+            tag.style.display = "none"; 
+          
+    }
+console.log(nouveauTag);
+}
+
+
+function addTagAfterClick() {
+
+    if(input.value.length > 0) {
+        createNewTag(input.value, "blue");
+    }
+    console.log(input.value);
+}
+
+function addTagAfterKeypress() {
+    // 13 = touche entrée
+    if(input.value.length > 0 && event.which === 13) {
+        createNewTag(input.value, "blue");
+    }
+}
+
+enterButton.addEventListener("click", addTagAfterClick);
+
+input.addEventListener("keypress", addTagAfterKeypress);
+
+
+// ******************************************************************
+// ********************TAGS INGREDIENTS APPAREILS USTENSILES*********
+// *******************************************************************
+
+
+
+
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('filters__ingredients__list-item')) {
+    // e.preventDefault();
+    // e.stopPropagation();
+    console.log(e.target.innerText);
+    createNewTag(e.target.innerText, "blue")
+  }
+  if (e.target.classList.contains('filters__appareil__list-item')) {
+    // e.preventDefault();
+    // e.stopPropagation();
+    console.log(e.target.innerText);
+    createNewTag(e.target.innerText, "green")
+  }
+  if (e.target.classList.contains('filters__ustensiles__list-item')) {
+    // e.preventDefault();
+    // e.stopPropagation();
+    console.log(e.target.innerText);
+    createNewTag(e.target.innerText, "red")
+  }
+});
+
+
+// const arraysForTags = [ustensilsList, appliancesList , ingredientsList];
+
+
+
+// ustensilsTag = ustensilsList.children;
+// // console.log(ustensilsTag);
+
+// Array.from(ustensilsTag).forEach(ustensilTag => {
+    
+
+//     ustensilTag.addEventListener("click", putainDeTag);
+//     // console.log(valeur);
+//     function putainDeTag() {
+//             // valeur.preventDefault();
+//             let tagChoisi = `<div class="tag__item">
+//                     <p>${this.innerHTML}</p>
+//                     <i class="far fa-times-circle"></i>
+//                 </div>`
+//             tagList.appendChild(tagChoisi);
+    
+//             console.log(this.innerHTML);
+        
+//     }
+
+// })
+
+// for(let u = 0; u < ustensilsTag.length; u ++) {
+//     ustensilsTag[u].onclick = createNewTag;
+
+//     console.log(ustensilsTag[u].innerText);
+// }
+
+// ustensilsTag.onclick = createNewTag(ustensilsTag.innerText);
+// console.log(ustensilsTag);
+
+// arraysForTags.forEach(arrayForTag => {
+//     const tagsToChoose = arrayForTag.children;
+//     // console.log(tagToChoose);
+//     // Array.from(tagsToChoose).forEach(tagToChoose => {
+//     //     tagToChoose.addEventListener("click", createNewTag(tagToChoose.innerText));
+//         console.log(Array.from(tagsToChoose));
+//     // })
+//     for(t = 0; t < tagsToChoose.length; t++) {
+//         tagsToChoose[t].addEventListener("click", createNewTag(tagsToChoose[t].innerText));
+//         console.log(Array.from(t));
+//     }
+// })
