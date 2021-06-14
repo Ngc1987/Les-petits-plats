@@ -65,10 +65,10 @@ header {
   color: rgba(0, 0, 0, 0.37);
 }
 .search__input:hover {
-  box-shadow: 0px 0px 8px #e7e7e7, 0px 0px 16px #e7e7e7, 0px 0px 25px #e7e7e7;
+  box-shadow: 0 0 0.7rem #e7e7e7, 0 0 1.3rem #e7e7e7, 0 0 2rem #e7e7e7, 0 0 2.8rem #e7e7e7;
 }
 .search__input:focus {
-  box-shadow: 0px 0px 8px #e7e7e7, 0px 0px 16px #e7e7e7, 0px 0px 25px #e7e7e7;
+  box-shadow: 0 0 0.7rem #e7e7e7, 0 0 1.3rem #e7e7e7, 0 0 2rem #e7e7e7, 0 0 2.8rem #e7e7e7;
   outline-style: none;
 }
 .search__logo {
@@ -109,11 +109,13 @@ header {
     height: auto;
     opacity: 1;
   }
-  100% {
+  10% {
+    opacity: 0;
     visibility: hidden;
+  }
+  100% {
     width: 0;
     height: 0;
-    opacity: 0;
   }
 }
 .tagAnim {
@@ -517,9 +519,6 @@ header {
   border-bottom-left-radius: 5px;
   height: 186px;
   width: 380px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .recipes__sample__foot-title {
   padding-left: 20px;

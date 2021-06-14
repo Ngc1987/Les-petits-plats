@@ -67,14 +67,16 @@ header {
         }
 
         &:hover {
-            box-shadow: 0px 0px 8px $primary,
-                        0px 0px 16px $primary,
-                        0px 0px 25px $primary;
+            box-shadow: 0 0 0.7rem $primary,
+                        0 0 1.3rem $primary,
+                        0 0 2rem $primary,
+                        0 0 2.8rem $primary;
         }
         &:focus {
-            box-shadow: 0px 0px 8px $primary,
-                        0px 0px 16px $primary,
-                        0px 0px 25px $primary;
+            box-shadow: 0 0 0.7rem $primary,
+                        0 0 1.3rem $primary,
+                        0 0 2rem $primary,
+                        0 0 2.8rem $primary;
             outline-style: none;
                       
         }
@@ -119,15 +121,20 @@ header {
         height: auto;
         opacity: 1;
     }
-    100% {
+    10% {
+        opacity: 0;
         visibility: hidden;
+    }
+    100% {
+        
         width: 0;
         height: 0;
-        opacity: 0;
     }
 }
 
-
+// i {
+//     background-color: #FBBB73;
+// }
 
 
 
@@ -678,9 +685,9 @@ header {
             border-bottom-left-radius: 5px;
             height: 186px;
             width: 380px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
+            // text-overflow: ellipsis;
+            // overflow: hidden;
+            // white-space: nowrap;
 
             &-title {
                 padding-left: 20px;
@@ -749,7 +756,5 @@ header {
                 }
             }
         }
-
-        
     }
 }
