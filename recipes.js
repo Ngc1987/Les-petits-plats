@@ -1857,10 +1857,15 @@ function recipeFilterByInput() {
 
         const newIngredientsBigArray = ingredientsBigArray.join(" ");
 
-        if(recipeTitle.innerText.toLowerCase().includes(input.value.toLowerCase()) || recipeDescript.innerText.toLowerCase().includes(input.value.toLowerCase()) || newIngredientsBigArray.includes(input.value.toLowerCase())) {
+        if(input.value.length > 2) {
+            if(recipeTitle.innerText.toLowerCase().includes(input.value.toLowerCase()) || recipeDescript.innerText.toLowerCase().includes(input.value.toLowerCase()) || newIngredientsBigArray.includes(input.value.toLowerCase())) {
+                recipeSample.style.display = "flex";
+            } else {
+                recipeSample.style.display = "none";
+            }
+        }
+        if(input.value.length < 3) {
             recipeSample.style.display = "flex";
-        } else {
-            recipeSample.style.display = "none";
         }
     });
 }
@@ -1873,6 +1878,8 @@ const filtersIngredientsDiv = document.querySelector(".filters__ingredients");
 
 function showIngredientsInput() {
 
+
+    ingredientsList.innerHTML = "";
     const ingredientsBigArray = [];
 
     allIngredients.forEach(ingredient => {
@@ -1896,7 +1903,8 @@ function showIngredientsInput() {
 }
 
 showIngredientsInput();
-input.addEventListener("blur", showIngredientsInput);
+// input.addEventListener("blur", showIngredientsInput);
+
 
 const ingredientsInput = document.querySelector(".filters__ingredients__head-input");
 const ingredientsArrow = document.querySelector(".filters__ingredients__head-arrow");
@@ -1931,6 +1939,8 @@ document.addEventListener("click", function(e) {
 
 ingredientsInput.addEventListener("focus", showIngredients);
 ingredientsArrow.addEventListener("click", showIngredients);
+ingredientsInput.addEventListener("focus", showIngredientsInput);
+ingredientsArrow.addEventListener("click", showIngredientsInput);
 
 
 
