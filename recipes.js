@@ -1724,9 +1724,10 @@ const recipes = [
 ]
 
 
-
+// Input de recherche principale
 const input = document.querySelector(".search__input");
 
+// Création des recttes dans le html
 recipes.forEach(recipe  => {
     // console.log(recipe);
 
@@ -1738,7 +1739,6 @@ recipes.forEach(recipe  => {
 
     const recipeSampleHead = document.createElement("div");
     recipeSampleHead.setAttribute("class", "recipes__sample__head");
-
 
     const recipeSampleFoot = document.createElement("div");
     recipeSampleFoot.setAttribute("class", "recipes__sample__foot");
@@ -1754,7 +1754,6 @@ recipes.forEach(recipe  => {
     const time = document.createElement("p");
     time.setAttribute("class", "time");
     time.innerHTML = `<i class="far fa-clock"></i><span>${recipe.time} min</span>`;
-    
 
     const instruction = document.createElement("p");
     instruction.setAttribute("class", "instruction");
@@ -1762,9 +1761,6 @@ recipes.forEach(recipe  => {
 
     const ingredientAndQuantity = document.createElement("div");
     ingredientAndQuantity.setAttribute("class", "ingredientAndQuantity");
-    
-    
-    
 
     recipe.ingredients.forEach(aliment => {
 
@@ -1805,59 +1801,35 @@ recipes.forEach(recipe  => {
 
     recipeList.appendChild(recipeSample);
 
-    
-
-    // function recipeFilterByInput() {
-
-    //     console.log(input.value.length);
-
-
-    //     if((input.value.length > 2) && (recipe.name.toLowerCase().includes(input.value.toLowerCase()) || recipe.description.toLowerCase().includes(input.value.toLowerCase()))) {
-    //         recipeSample.style.display = "flex";
-    //     } else {
-    //         recipeSample.style.display = "none";
-    //     }
-
-    //     // for(let i = 0; i < recipe.ingredients.length; i++) {
-    //     //     if(recipe.ingredients[i].ingredient.toLowerCase().includes(input.value.toLowerCase())){
-    //     //         recipeSample.style.display = "flex";
-    //     //     } else {
-    //     //         recipeSample.style.display = "none";
-    //     //     }
-    //     // }
-
-    //     // recipe.ingredients.forEach(aliment => {
-    //     //         if(aliment.ingredient.toLowerCase().includes(input.value.toLowerCase())) {
-    //     //             recipeSample.style.display = "flex";
-    //     //         } else {
-    //     //             recipeSample.style.display = "none";
-    //     //         }
-    //     // })
-
-    // }
 
 })
 
 // **************** Affichage des recettes selon saisie dans l'input *************
 input.addEventListener("input", recipeFilterByInput);
+// Selection de toutes les recettes présentes dans le html
 const recipeSamples = document.querySelectorAll(".recipes__sample");
 
 function recipeFilterByInput() {
 
     Array.from(recipeSamples).forEach(recipeSample => {
-
+        // Selection du titre de la recette
         const recipeTitle = recipeSample.querySelector(".recipes__sample__foot-title").firstChild;
+        // Selection de la description de la recette
         const recipeDescript = recipeSample.querySelector(".instruction");
+        // Selection des ingrédients de la recette
         const recipeIngredients = recipeSample.querySelectorAll(".ingredient");
+        // Tableau vide pour insérer chaque ingrédient dedans
         const ingredientsBigArray = [];
 
         for(let i = 0; i < recipeIngredients.length; i++) {
+            // Ajout de chaque ingrédient dans le tableau en minuscules
             ingredientsBigArray.push(recipeIngredients[i].innerHTML.toLowerCase());
         }
-
+        // Transformer le tableau d'ingrédients en chaîne de caractères
         const newIngredientsBigArray = ingredientsBigArray.join(" ");
-
+        // A partir de 3 lettres saisies dans l'input
         if(input.value.length > 2) {
+            // Si la valeur saisie dans l'input existe dans le titre, la description ou un ingredient de la recette, la recette reste apparente, sinon elle disparaît
             if(recipeTitle.innerText.toLowerCase().includes(input.value.toLowerCase()) || recipeDescript.innerText.toLowerCase().includes(input.value.toLowerCase()) || newIngredientsBigArray.includes(input.value.toLowerCase())) {
                 recipeSample.style.display = "flex";
             } else {
@@ -1877,7 +1849,6 @@ const ustensilsList = document.querySelector(".filters__ustensiles__list");
 const filtersIngredientsDiv = document.querySelector(".filters__ingredients");
 
 function showIngredientsInput() {
-
 
     ingredientsList.innerHTML = "";
     const ingredientsBigArray = [];
