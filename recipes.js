@@ -1895,7 +1895,7 @@ function showIngredientsInput() {
     })
 }
 
-showIngredientsInput();
+// showIngredientsInput();
 
 
 // *******************************************************************************
@@ -1940,8 +1940,35 @@ document.addEventListener("click", function(e) {
 
 ingredientsInput.addEventListener("focus", showIngredients);
 ingredientsArrow.addEventListener("click", showIngredients);
-ingredientsInput.addEventListener("focus", showIngredientsInput);
-ingredientsArrow.addEventListener("click", showIngredientsInput);
+// ingredientsInput.addEventListener("focus", showIngredientsInput);
+// ingredientsArrow.addEventListener("click", showIngredientsInput);
+
+// ****************************************************************************
+// ******************************Tableau d'ingrédients**************************
+// ****************************************************************************
+const ingredientsBigArray = [];
+
+function searchIngredients() {
+    recipes.forEach(recipe => {
+        recipe.ingredients.forEach(aliment => {
+            ingredientsBigArray.push(aliment.ingredient)
+        })
+    })
+
+    const ingredientsArray = new Set(ingredientsBigArray);
+
+    ingredientsArray.forEach(ingredient => {
+        
+        const li = document.createElement("li");
+        li.setAttribute("class", "filters__ingredients__list-item");
+        li.innerHTML = ingredient;
+        ingredientsList.appendChild(li);
+    })
+
+    console.log(ingredientsArray);
+}
+
+searchIngredients();
 
 
 
