@@ -95,6 +95,7 @@ header {
     visibility: visible;
     width: 667px;
     height: auto;
+    max-height: 320px;
     opacity: 1;
   }
 }
@@ -276,6 +277,7 @@ header {
   height: max-content;
   cursor: pointer;
   transition: all 0.4s ease;
+  overflow: hidden;
 }
 .filters__ingredients:hover {
   box-shadow: 0px 0px 5px #3282f7, 0px 0px 10px #3282f7, 0px 0px 15px #3282f7;
@@ -348,6 +350,7 @@ header {
   width: auto;
   margin-left: 20px;
   transition: all 0.4s ease;
+  overflow: hidden;
 }
 .filters__appareil:hover {
   box-shadow: 0px 0px 5px #68d9a4, 0px 0px 10px #68d9a4, 0px 0px 15px #68d9a4;
@@ -423,6 +426,7 @@ header {
   width: auto;
   margin-left: 20px;
   transition: all 0.4s ease;
+  overflow: hidden;
 }
 .filters__ustensiles:hover {
   box-shadow: 0px 0px 5px #ed6454, 0px 0px 10px #ed6454, 0px 0px 15px #ed6454;

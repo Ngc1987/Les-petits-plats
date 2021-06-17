@@ -106,6 +106,7 @@ header {
         visibility: visible;
         width: 667px;
         height: auto;
+        max-height: 320px;
         opacity: 1;
     }
 }
@@ -349,6 +350,7 @@ header {
         height: max-content;
         cursor: pointer;
         transition: all 0.4s ease;
+        overflow: hidden;
 
         &:hover {
             box-shadow: 0px 0px 5px $secondary,
@@ -449,6 +451,7 @@ header {
         height: max-content;
         width: auto;
         margin-left: 20px;transition: all 0.4s ease;
+        overflow: hidden;
 
         &:hover {
             box-shadow: 0px 0px 5px $tertiary,
@@ -546,6 +549,7 @@ header {
         height: max-content;
         width: auto;
         margin-left: 20px;transition: all 0.4s ease;
+        overflow: hidden;
 
         &:hover {
             box-shadow: 0px 0px 5px $quartiary,
