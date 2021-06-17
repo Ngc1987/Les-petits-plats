@@ -304,6 +304,10 @@ header {
 }
 .filters__ingredients__head-input:focus {
   outline-style: none;
+  width: 250px;
+}
+.filters__ingredients__head-input:focus::placeholder {
+  color: #e7e7e7;
 }
 .filters__ingredients__head-arrow {
   font-size: 1.7rem;
@@ -375,6 +379,10 @@ header {
 }
 .filters__appareil__head-input:focus {
   outline-style: none;
+  width: 250px;
+}
+.filters__appareil__head-input:focus::placeholder {
+  color: #e7e7e7;
 }
 .filters__appareil__head-arrow {
   font-size: 1.7rem;
@@ -446,6 +454,10 @@ header {
 }
 .filters__ustensiles__head-input:focus {
   outline-style: none;
+  width: 250px;
+}
+.filters__ustensiles__head-input:focus::placeholder {
+  color: #e7e7e7;
 }
 .filters__ustensiles__head-arrow {
   font-size: 1.7rem;

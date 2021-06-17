@@ -388,7 +388,12 @@ header {
 
                 &:focus {
                     outline-style: none;
+                    width: 250px;
                 }
+
+                    &:focus::placeholder {
+                        color: $primary;
+                    }
             }
 
             &-arrow {
@@ -482,7 +487,12 @@ header {
 
                 &:focus {
                     outline-style: none;
+                    width: 250px;
                 }
+
+                    &:focus::placeholder {
+                        color: $primary;
+                    }
             }
 
             &-arrow {
@@ -574,7 +584,12 @@ header {
 
                 &:focus {
                     outline-style: none;
+                    width: 250px;
                 }
+
+                    &:focus::placeholder {
+                        color: $primary;
+                    }
             }
 
             &-arrow {
