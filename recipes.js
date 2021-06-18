@@ -250,7 +250,7 @@ const recipes = [
         "time": 50,
         "description": "Etaler la pate dans les moules à tartelette. Faire cuire la pate 30 minutes. Découper le chocolat en morceau et le faire chauffer, y ajouter la crême liquide, ajouter le beurre et remuer jusqu'à avoir une pâte homogène. Verser la pate sur les tartelettes. Couper les fraises en 2 et les positionner sur ",
         "appliance":"Four",
-        "ustensils":["moule à tartelettes (6)", "casserolle"]
+        "ustensils":["moule à tartelettes (6)", "casserole"]
     }, {
         "id": 8,
         "name": "Brownie",
@@ -290,7 +290,7 @@ const recipes = [
         "time": 60,
         "description": "Hachez les noix grossièrement. Faire fondre le chocolat avec le beurre. Mélanger les oeuf et le sucre et mélanger au chocolat. Ajouter la farine. Mélanger afin d'avoir quelque chose d'homogène puis incorporer les noix. Verser la préparation dans un moule de préférence rectangulaire. Cuire 2O à 25 minutes à 180°. Sortez du four et attendez quelques minutes pour démouler. Servir avec une boule de glace pour plus de gourmandise.",
         "appliance": "Four",
-        "ustensils": ["moule à gateaux", "casserolle"]
+        "ustensils": ["moule à gateaux", "casserole"]
     },
     {
         "id": 9,
@@ -422,7 +422,7 @@ const recipes = [
             }
         ],
         "time": 40,
-        "description": "Éplucher les fruits et les couper en morceaux, les mettre dans une casserolle en ajoutant l'eau et le sucre vanillé. Laisser cuire 15 minutes en remuant régulièrement.",
+        "description": "Éplucher les fruits et les couper en morceaux, les mettre dans une casserole en ajoutant l'eau et le sucre vanillé. Laisser cuire 15 minutes en remuant régulièrement.",
         "appliance": "Casserole",
         "ustensils": ["couteau", "économe"]
     },
@@ -733,14 +733,14 @@ const recipes = [
                 "unit": "cl"
             },
             {
-                "ingredient": "Crème Fraiche",
+                "ingredient": "Crème fraiche",
                 "quantity" : 1,
                 "unit": "cuillères à soupe"
             }
         ],
         "time": 30,
         "description":"Cuisiner la viande hachée dans une poelle à frire. Dans une autre faire cuire les oignons découpés en fins dés avec un peu de beurre. Ajouter du vin rouge. Mélanger les oigons avec la viande hachée. Faire cuire les pates le temps indiqué sur le paquet. Ajouter le coulis de tomates à la viande hachée. Une fois que les pates sont cuites, ajouter la crème fraiche à la viande hachée. Serivir.",
-        "appliance": "Casserolle.",
+        "appliance": "casserole",
         "ustensils":["Cuillère en bois", "louche", "couteau"]
     },
     {
@@ -776,7 +776,7 @@ const recipes = [
         "time": 30,
         "description":"Faire fondre le chocolat et le beurre au bain marie. Dans un saladier battre les oeufs avec le sucre jusqu'à obtenir une texture de type mousse. Ajouter la farine ainsi que le mélange de beurre et chocolat fondu. Beurrez le moule à gateaux. Mettre au four préchauffé à 200° puis faites chauffer pendant 15 minutes. C'est prêt. Servir avec une boule de glace ou une crême dessert.",
         "appliance": "Four",
-        "ustensils":["moule à gateaux", "fouet", "casserolle"]
+        "ustensils":["moule à gateaux", "fouet", "casserole"]
     },
     {
         "id": 23,
@@ -803,7 +803,7 @@ const recipes = [
                 "quantity": 3
             },
             {
-                "ingredient": "Crème Fraîche",
+                "ingredient": "Crème Fraiche",
                 "quantity": 20,
                 "unit": "cl"
             },
@@ -814,7 +814,7 @@ const recipes = [
             }
         ],
         "time": 60,
-        "description":"Etaler la pate dans un moule et la piquer.Parsemer de beurre. Faire chauffer les lardon dans une poêle. Battre les oeufs en ajoutant la crème fraîche et le lait. Finalement ajouter les lardons, salez poivrez à votre gout. Verser l'ensemble sur la pâte. Cuire environ 50 minutes.",
+        "description":"Etaler la pate dans un moule et la piquer.Parsemer de beurre. Faire chauffer les lardon dans une poêle. Battre les oeufs en ajoutant la crème fraiche et le lait. Finalement ajouter les lardons, salez poivrez à votre gout. Verser l'ensemble sur la pâte. Cuire environ 50 minutes.",
         "appliance": "Four",
         "ustensils":["moule à gateaux", "rouleau à patisserie", "fouet"]
     },
@@ -937,7 +937,7 @@ const recipes = [
                 "quantity": 1
             },
             {
-                "ingredient": "Crème fraîche",
+                "ingredient": "Crème fraiche",
                 "quantity": 4,
                 "unit": "cuillère à soupe"
             },
@@ -953,8 +953,8 @@ const recipes = [
             }
         ],
         "time": 15,
-        "description":"Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. Ajouter les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crême fraîche",
-        "appliance": "Casserolle",
+        "description":"Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. Ajouter les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crême fraiche",
+        "appliance": "casserole",
         "ustensils":["couteau","cuillère en bois"]
     },
     {
@@ -982,7 +982,7 @@ const recipes = [
                 "unit":"grammes"
             },
             {
-                "ingredient": "Crême fraîche",
+                "ingredient": "Crème fraiche",
                 "quantity": 10,
                 "unit": "cl"
             }
@@ -990,7 +990,7 @@ const recipes = [
         "time": 80,
         "description":"Emincer les blanc de poireaux et les faire chauffer dans 25 grammes de beurre. AJouter les pommes de terres coupées en morceaux. Ajouter l'eau et laisser mijoter pour 45 minutes. Chauffer l'oseille avec le beurre restant puis incorporer le tout. Mixez. Ajoutez la crème. Bon appetit.",
         "appliance": "Mixer",
-        "ustensils":["casserolle","couteau"]
+        "ustensils":["casserole","couteau"]
     },
     {
         "id": 29,
@@ -1046,7 +1046,7 @@ const recipes = [
         "time": 60,
         "description":"Mettre tous les ingrédients dans une cocotte. ajouter de l'eau pour recouvrir l'ensemble et laisser cuirre à petit feur pour 1 heure. Passer au mixer. Salez, poivrez. C'est prêt",
         "appliance": "Mixer",
-        "ustensils":["casserolle", "cuillère en bois"]
+        "ustensils":["casserole", "cuillère en bois"]
     },
     {
         "id": 31,
@@ -1169,7 +1169,7 @@ const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Crème fraîche",
+                "ingredient": "Crème fraiche",
                 "quantity": 20,
                 "unit": "cl"
             },
@@ -1182,7 +1182,7 @@ const recipes = [
             }
         ],
         "time": 25,
-        "description":"Eplucher les patates douces et coupez les en morceaux. Les faire cuire durant 20 minute dans une casserolle d'eau bouillante. Passer au mixer en ajoutant la crème et l'huile d'olive à son gout. Salez, poivrez. Pressez l'orange et ajouter le jus à l'ensemble. Servir.",
+        "description":"Eplucher les patates douces et coupez les en morceaux. Les faire cuire durant 20 minute dans une casserole d'eau bouillante. Passer au mixer en ajoutant la crème et l'huile d'olive à son gout. Salez, poivrez. Pressez l'orange et ajouter le jus à l'ensemble. Servir.",
         "appliance": "Mixer",
         "ustensils":["couteau", "économe", "cuillère en bois"]
     },
@@ -1205,7 +1205,7 @@ const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Crème fraîche",
+                "ingredient": "Crème fraiche",
                 "quantity": 2,
                 "unit":"cuillères à soupe"
             },
@@ -1416,7 +1416,7 @@ const recipes = [
         ],
         "time": 20,
         "description":"Séparer les blancs d'oeufs. Faire fondre le chocolat au bain marie. Ajouter les jaunes et le sucre au chocolat hors du feu. Battre les blancs en neige. Ajouter les blancs au mélange de chocolat. Mélangez délicatement avec une spatule. Servir dans un plat ou dans des verres. Mettre au frais",
-        "appliance": "Casserolle",
+        "appliance": "casserole",
         "ustensils":["fouet", "spatule", "verres"]
     }, 
     {
@@ -1514,7 +1514,7 @@ const recipes = [
         ],
         "time": 15,
         "description":"Mélanger la farine et le beurre fondu en ajoutant le lait peu à peu. Ajouter du sucre après la cuisson. Bien mélanger. Ajouter le chocolat en morceaux et laisser chauffer 8 minutes en mélangeant avec une cuillère en bois. Mettre dans des verres",
-        "appliance": "Casserolle",
+        "appliance": "casserole",
         "ustensils":["cuillère en bois"]
     },
     {
@@ -1544,7 +1544,7 @@ const recipes = [
         ],
         "time": 30,
         "description":"Faire bouillir le lait ( on peut y ajouter de l'essence de vanille. Battre les oeufs et le sucre, ajouter la farine puis finalement ajouter le lait chaud. Remettre à feu doux pour faire épaissir en remuant pendant 5 à 10 minutes.",
-        "appliance": "Casserolle",
+        "appliance": "casserole",
         "ustensils":["fouet","saladier"]
     },
     {
@@ -1608,7 +1608,7 @@ const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Crème Fraîche",
+                "ingredient": "Crème Fraiche",
                 "quantity": 20,
                 "unit":"cl"
             }
@@ -1723,24 +1723,30 @@ const recipes = [
     }
 ]
 
-// console.log(recipes);
 
 
-// for(i = 0; i < recipes.length; i++) {
-//     console.log(recipes[i]);
-// }
+
+
+// Input de recherche principale
+const input = document.querySelector(".search__input");
+
+// *******************************************************************
+// *************** Injection des recettes dans le html ***************
+// *******************************************************************
+console.log(recipes.length);
+
+
 
 recipes.forEach(recipe  => {
-    // console.log(recipe);
 
     const recipeList = document.querySelector(".recipes");
 
     const recipeSample = document.createElement("article");
     recipeSample.setAttribute("class", "recipes__sample");
+    recipeSample.classList.add("class", "entrees");
 
     const recipeSampleHead = document.createElement("div");
     recipeSampleHead.setAttribute("class", "recipes__sample__head");
-
 
     const recipeSampleFoot = document.createElement("div");
     recipeSampleFoot.setAttribute("class", "recipes__sample__foot");
@@ -1756,7 +1762,6 @@ recipes.forEach(recipe  => {
     const time = document.createElement("p");
     time.setAttribute("class", "time");
     time.innerHTML = `<i class="far fa-clock"></i><span>${recipe.time} min</span>`;
-    
 
     const instruction = document.createElement("p");
     instruction.setAttribute("class", "instruction");
@@ -1764,9 +1769,6 @@ recipes.forEach(recipe  => {
 
     const ingredientAndQuantity = document.createElement("div");
     ingredientAndQuantity.setAttribute("class", "ingredientAndQuantity");
-    
-    
-    
 
     recipe.ingredients.forEach(aliment => {
 
@@ -1787,14 +1789,10 @@ recipes.forEach(recipe  => {
         details.appendChild(ingredient);
         details.appendChild(quantity);
         ingredientAndQuantity.appendChild(details); 
-
-        
-        // console.log(quantity);
     })
 
     recipeSampleTitle.appendChild(title);
     recipeSampleTitle.appendChild(time);
-    
 
     recipeSampleDetails.appendChild(ingredientAndQuantity);
     recipeSampleDetails.appendChild(instruction);
@@ -1806,24 +1804,384 @@ recipes.forEach(recipe  => {
     recipeSample.appendChild(recipeSampleFoot);
 
     recipeList.appendChild(recipeSample);
-
-    
 })
 
-const filtersUstensilsDiv = document.querySelector(".filters__ustensiles");
-const filtersAppliancesDiv = document.querySelector(".filters__appareil");
+
+const ingredientsList = document.querySelector(".filters__ingredients__list");
+const appliancesList = document.querySelector(".filters__appareil__list");
+const ustensilsList = document.querySelector(".filters__ustensiles__list");
 const filtersIngredientsDiv = document.querySelector(".filters__ingredients");
 
+// *******************************************************************************
+// ********* Affichage des recettes selon saisie dans l'input principal **********
+// *******************************************************************************
+
+input.addEventListener("input", recipeFilterByInput);
+// Selection de toutes les recettes présentes dans le html
+const recipeSamples = document.querySelectorAll(".recipes__sample");
+
+function recipeFilterByInput() {
+
+    Array.from(recipeSamples).forEach(recipeSample => {
+        // Selection du titre de la recette
+        const recipeTitle = recipeSample.querySelector(".recipes__sample__foot-title").firstChild;
+        // Selection de la description de la recette
+        const recipeDescript = recipeSample.querySelector(".instruction");
+        // Selection des ingrédients de la recette
+        const recipeIngredients = recipeSample.querySelectorAll(".ingredient");
+        // Tableau vide pour insérer chaque ingrédient dedans
+        const ingredientsBigArray = [];
+
+        for(let i = 0; i < recipeIngredients.length; i++) {
+            // Ajout de chaque ingrédient dans le tableau en minuscules
+            ingredientsBigArray.push(recipeIngredients[i].innerHTML.toLowerCase());
+        }
+        // Transformer le tableau d'ingrédients en chaîne de caractères
+        const newIngredientsBigArray = ingredientsBigArray.join(" ");
+        // A partir de 3 lettres saisies dans l'input
+        if(input.value.length > 2) {
+            // Si la valeur saisie dans l'input existe dans le titre, la description ou un ingredient de la recette, la recette reste apparente, sinon elle disparaît
+            if(recipeTitle.innerText.toLowerCase().includes(input.value.toLowerCase()) || recipeDescript.innerText.toLowerCase().includes(input.value.toLowerCase()) || newIngredientsBigArray.includes(input.value.toLowerCase())) {
+                recipeSample.style.display = "flex";
+            } else {
+                recipeSample.style.display = "none";
+            }
+        }
+
+        if(input.value.length < 3) {
+            recipeSample.style.display = "flex";
+        }
+
+        
+    });
+    // play(); 
+}
+
+// function play() {
+//     recipeSamples.forEach(recipeSample => {
+//         recipeSample.className = "recipes__sample class entrees ";
+//         window.requestAnimationFrame(function(time) {
+//           window.requestAnimationFrame(function(time) {
+//             recipeSample.className = "recipes__sample class entrees recipeAnim";
+//           });
+//         });
+//     })
+//   }
+
+
+// *******************************************************************************
+// **************** Fonctions pour ouverture et fermeture des champs *************
+// ********** de recherche avancée ingrédients, appareils et ustensiles **********
+// *******************************************************************************
+const ingredientsDiv = document.querySelector(".filters__ingredients");
+const ingredientsInputHead = document.querySelector(".filters__ingredients__head");
+const ingredientsInput = document.querySelector(".filters__ingredients__head-input");
+const ingredientsArrow = document.querySelector(".filters__ingredients__head-arrow");
+const appliancesInput = document.querySelector(".filters__appareil__head-input");
+const appliancesArrow = document.querySelector(".filters__appareil__head-arrow");
+const ustensilsInput = document.querySelector(".filters__ustensiles__head-input");
+const ustensilsArrow = document.querySelector(".filters__ustensiles__head-arrow");
+
+// *******************************************************************************
+// ******* Ouverture et fermeture champs de recherche avancée Ingrédients ********
+// *******************************************************************************
+
+
+function blueShadow() {
+        ingredientsDiv.classList.add("blueShadow")
+}
+function noShadow() {
+        ingredientsDiv.classList.remove("blueShadow")
+}
+
+function showIngredients() {
+    appliancesList.style.width = "0";
+    appliancesList.style.height = "0";
+    appliancesList.style.visibility = "hidden";
+
+    ustensilsList.style.width = "0";
+    ustensilsList.style.height = "0";
+    ustensilsList.style.visibility = "hidden";
+
+    ingredientsInputHead.classList.remove("inputClose");
+    ingredientsInputHead.classList.add("inputOpen");
+
+    ingredientsList.style.boxShadow = "0px 0px 5px #3282f7,0px 0px 10px #3282f7,0px 0px 15px #3282f7";
+    ingredientsList.classList.remove("animClose");
+    ingredientsList.classList.add("animOpen");
+
+    ingredientsInput.setAttribute("placeholder", "Rechercher un ingrédient");
+
+    blueShadow();
+}
+
+function hideIngredients() {
+    ingredientsInputHead.classList.remove("inputOpen");
+    ingredientsInputHead.classList.add("inputClose");
+
+    ingredientsList.classList.remove("animOpen");
+    ingredientsList.classList.add("animClose");
+    
+    ingredientsInput.setAttribute("placeholder", "Ingrédients");
+    
+    noShadow();
+}
+
+document.addEventListener("click", function(e) {
+
+    if (!e.target.classList.contains('filters__ingredients__list-item') && !e.target.classList.contains('filters__ingredients__head-input')) {
+            hideIngredients();
+    }
+
+    if (e.target.classList.contains('filters__ingredients__head-input')) {
+            showIngredients();
+    }
+})
+
+ingredientsInput.addEventListener("focus", showIngredients);
+ingredientsArrow.addEventListener("click", showIngredients);
+// ingredientsInput.addEventListener("focus", showIngredientsInput);
+// ingredientsArrow.addEventListener("click", showIngredientsInput);
+
+// *******************************************************************************
+// ******** Ouverture et fermeture champs de recherche avancée Appareils *********
+// *******************************************************************************
+
+function showAppliances() {
+    ingredientsList.style.width = "0";
+    ingredientsList.style.height = "0";
+    ingredientsList.style.visibility = "hidden";
+
+    ustensilsList.style.width = "0";
+    ustensilsList.style.height = "0";
+    ustensilsList.style.visibility = "hidden";
+
+    appliancesList.classList.remove("animClose");
+    appliancesList.classList.add("animOpen");
+
+    appliancesInput.setAttribute("placeholder", "Rechercher un appareil");
+}
+
+function hideAppliances() {
+    appliancesList.classList.remove("animOpen");
+    appliancesList.classList.add("animClose");
+
+    appliancesInput.setAttribute("placeholder", "Appareils");
+}
+
+document.addEventListener("click", function(e) {
+
+    if (!e.target.classList.contains('filters__appareil__list-item') && !e.target.classList.contains('filters__appareil__head-input')) {
+            hideAppliances();
+    }
+    
+    if (e.target.classList.contains('filters__appareil__head-input')) {
+            showAppliances();
+    }
+})
+
+appliancesInput.addEventListener("focus", showAppliances);
+appliancesArrow.addEventListener("click", showAppliances);
+
+// *******************************************************************************
+// ******** Ouverture et fermeture champs de recherche avancée Ustensiles ********
+// *******************************************************************************
+
+function showUstensils() {
+    ingredientsList.style.width = "0";
+    ingredientsList.style.height = "0";
+    ingredientsList.style.visibility = "hidden";
+
+    appliancesList.style.width = "0";
+    appliancesList.style.height = "0";
+    appliancesList.style.visibility = "hidden";
+
+    ustensilsList.classList.remove("animClose");
+    ustensilsList.classList.add("animOpen");
+
+    ustensilsInput.setAttribute("placeholder", "Rechercher un ustensile");
+}
+
+function hideUstensils() {
+    ustensilsList.classList.remove("animOpen");
+    ustensilsList.classList.add("animClose");
+
+    ustensilsInput.setAttribute("placeholder", "Ustensiles");
+}
+
+ustensilsInput.addEventListener("focus", showUstensils);
+ustensilsArrow.addEventListener("click", showUstensils);
+
+
+document.addEventListener("click", function(e) {
+
+    if (!e.target.classList.contains('filters__ustensiles__list-item') && !e.target.classList.contains('filters__ustensiles__head-input')) {
+            hideUstensils();
+    }
+
+    if (e.target.classList.contains('filters__ustensiles__head')) {
+            showUstensils();
+    }
+})
+
+// *******************************************************************************
+// **************** Création des tags de recherche supplémentaire ****************
+// *******************************************************************************
+
+const enterButton = document.querySelector(".search__logo");
+let nouveauTag = input.value  ;
+
+function createNewTag(tagChoisi, color) {
+
+    const tagList = document.querySelector(`.tag__${color}`);
+    let nouveauTag = tagChoisi;
+
+    let tag = document.createElement("div");
+    tag.setAttribute("class", "tag__" + color + "__item");
+    tag.classList.add("tagAnim");
+
+    let tagName = document.createElement("p");
+    tagName.appendChild(document.createTextNode(tagChoisi));
+
+    let deleteButton = document.createElement("i");
+    deleteButton.setAttribute("class", "far fa-times-circle");
+
+    tag.appendChild(tagName);
+    tag.appendChild(deleteButton);
+    tagList.appendChild(tag);
+
+    input.value = "";
+
+    deleteButton.addEventListener("click", deleteTag)
+
+    function deleteTag() {
+            tag.style.display = "none"; 
+            // filterRecipeWithTags();
+    }
+
+    console.log(nouveauTag);
+
+    filterRecipeWithTags();
+    showIngredientsInput();
+}
+
+
+function addTagAfterClick() {
+    if(input.value.length > 0) {
+        createNewTag(input.value, "blue");
+    }
+    console.log(input.value);
+}
+
+function addTagAfterKeypress() {
+    // 13 = touche entrée
+    if(input.value.length > 0 && event.which === 13) {
+        createNewTag(input.value, "blue");
+    }
+}
+
+enterButton.addEventListener("click", addTagAfterClick);
+input.addEventListener("keypress", addTagAfterKeypress);
+
+
+// ******************************************************************
+// ********************TAGS INGREDIENTS APPAREILS USTENSILES*********
+// *******************************************************************
+
+document.addEventListener('click', function(e) {
+
+  if (e.target.classList.contains('filters__ingredients__list-item')) {
+        createNewTag(e.target.innerText, "blue")
+  }
+
+  if (e.target.classList.contains('filters__appareil__list-item')) {
+        createNewTag(e.target.innerText, "green")
+  }
+
+  if (e.target.classList.contains('filters__ustensiles__list-item')) {
+        createNewTag(e.target.innerText, "red")
+  }
+});
+
+// ******************************************************************
+// ************ Filtrer les recettes avec ajout nouveau tag *********
+// ******************************************************************
+function filterRecipeWithTags() {
+
+    recipeSamples.forEach(recipeSample => {
+
+        recipeSample.style.display = "flex";
+
+        const tagsToSortRecipes = document.querySelectorAll(".tag__blue__item", ".tag__green__item", ".tag__red__item");
+
+        tagsToSortRecipes.forEach(tagToSortRecipe => {
+        
+            // Selection du titre de la recette
+            const recipeTitle = recipeSample.querySelector(".recipes__sample__foot-title").firstChild;
+            // Selection de la description de la recette
+            const recipeDescript = recipeSample.querySelector(".instruction");
+            // Selection des ingrédients de la recette
+            const recipeIngredients = recipeSample.querySelectorAll(".ingredient");
+            // Tableau vide pour insérer chaque ingrédient dedans
+            const ingredientsBigArray = [];
+
+            for(let i = 0; i < recipeIngredients.length; i++) {
+                // Ajout de chaque ingrédient dans le tableau en minuscules
+                ingredientsBigArray.push(recipeIngredients[i].innerHTML.toLowerCase());
+            }
+            // Transformer le tableau d'ingrédients en chaîne de caractères
+            const newIngredientsBigArray = ingredientsBigArray.join(" ");
+            // Si la valeur du tag existe dans le titre, la description ou un ingredient de la recette, la recette reste apparente, sinon elle disparaît
+            if(recipeTitle.innerText.toLowerCase().includes(tagToSortRecipe.firstChild.innerText) || recipeDescript.innerText.toLowerCase().includes(tagToSortRecipe.firstChild.innerText) || newIngredientsBigArray.includes(tagToSortRecipe.firstChild.innerText)) {
+                recipeSample.style.display = "flex";
+            } else {
+                recipeSample.style.display = "none";
+            }
+        })
+        // console.log(tagsForFilter);
+    })
+}
+
+
+// *******************************************************************************
+//  Affichage ingredients selon recettes restantes apres recherche premier mot-clé
+// ********************* Fonction relancée à chaque recherche ********************
+// *******************************************************************************
+function showIngredientsInput() {
+
+    ingredientsList.innerHTML = "";
+    const ingredientsBigArray = [];
+    const allIngredients = document.querySelectorAll(".ingredient");
+
+    allIngredients.forEach(ingredient => {
+        if(ingredient.parentElement.parentElement.parentElement.parentElement.parentElement.style.display == "flex") {
+            ingredientsBigArray.push(ingredient.innerText.toLowerCase());
+        }
+    })
+
+    ingredientsBigArray.sort();
+
+    const ingredientsToShowOnIngredientsDiv = new Set(ingredientsBigArray);
+
+    Array.from(ingredientsToShowOnIngredientsDiv).forEach(ingredientToShow => {
+        const li = document.createElement("li");
+        li.setAttribute("class", "filters__ingredients__list-item");
+        li.innerHTML = ingredientToShow;
+        ingredientsList.appendChild(li);
+    })
+}
+
+// showIngredientsInput();
+
 // ****************************************************************************
-// ******************************Tableau d'ingrédients**************************
+// ****** Affichage Tableau d'ingrédients dans chapms de recherche avancée ****
 // ****************************************************************************
 const ingredientsBigArray = [];
-const ingredientsList = document.querySelector(".filters__ingredients__list");
 
 function searchIngredients() {
     recipes.forEach(recipe => {
         recipe.ingredients.forEach(aliment => {
-            ingredientsBigArray.push(aliment.ingredient)
+            ingredientsBigArray.push(aliment.ingredient.toLowerCase())
         })
     })
 
@@ -1842,78 +2200,32 @@ function searchIngredients() {
 
 searchIngredients();
 
-const ingredientsInput = document.querySelector(".filters__ingredients__head-input");
-const ingredientsArrow = document.querySelector(".filters__ingredients__head-arrow");
+// ******************************************************************
+// ***** Autosuggestion selon texte tapé dans input ingredients *****
+// ******************************************************************
 
+function hideOrShowIngredients() {
+    const ingredientsToHide = document.querySelectorAll(".filters__ingredients__list-item");
 
-function showIngredients() {
-    // ingredientsList.style.display = "flex";
-    appliancesList.style.height = "0";
-    ustensilsList.style.height = "0";
-    appliancesList.style.width = "0";
-    ustensilsList.style.width = "0";
-    appliancesList.style.visibility = "hidden";
-    ustensilsList.style.visibility = "hidden";
-    // ingredientsInput.style.marginTop = "23px";
-    // ingredientsArrow.style.marginTop = "23px";
-    // ingredientsList.style.marginTop = "23px";
-    // appliancesList.style.maxHeight = "397px"
-    // appliancesList.style.maxWidth = "667px";
-    // ingredientsList.style.visibility = "visible";
-    // ingredientsList.style.width = "667px";
-    // ingredientsList.style.height = "auto";
-    // console.log(appliancesInput.value);
-    ingredientsList.classList.remove("animClose");
-    ingredientsList.classList.add("animOpen");
+    ingredientsToHide.forEach(ingredientToHide => {
+        if(!ingredientToHide.innerText.includes(ingredientsInput.value)) {
+            ingredientToHide.style.display = "none";
+        } else {
+            ingredientToHide.style.display = "flex";
+        }
+    })
 }
-function hideIngredients() {
-    // ingredientsList.style.display = "none";
-    // filtersUstensilsDiv.style.maxHeight = "397px";
-    // filtersAppliancesDiv.style.maxHeight = "397px";
-    // ingredientsList.style.width = "0px";
-    // ingredientsList.style.height = "0px";
-    // ingredientsList.style.visibility = "hidden";
-    ingredientsList.classList.remove("animOpen");
-    ingredientsList.classList.add("animClose");
-    // ingredientsInput.style.marginTop = "0px";
-    // ingredientsArrow.style.marginTop = "0px";
-    // ingredientsList.style.marginTop = "0px";
-
-    
-    // console.log(appliancesInput.value);
-}
-document.addEventListener("click", function(e) {
-    if (!e.target.classList.contains('filters__ingredients__list-item') && !e.target.classList.contains('filters__ingredients__head-input')) {
-        // e.preventDefault();
-        // e.stopPropagation();
-        hideIngredients();
-        // console.log(e.target.innerText);
-        // createNewTag(e.target.innerText);
-    }
-
-    if (e.target.classList.contains('filters__ingredients__head-input')) {
-        showIngredients();
-    }
-})
-
-
-ingredientsInput.addEventListener("focus", showIngredients);
-// ingredientsInput.addEventListener("blur", hideIngredients);
-ingredientsArrow.addEventListener("click", showIngredients);
-
-
-
+ingredientsInput.addEventListener("input", hideOrShowIngredients);
 
 // ****************************************************************************
 // ******************************Tableau d'appareils**************************
 // ****************************************************************************
 
 const appliancesBigArray = [];
-const appliancesList = document.querySelector(".filters__appareil__list");
 
 function searchAppliances() {
     recipes.forEach(recipe => {
-            appliancesBigArray.push(recipe.appliance)
+            appliancesBigArray.push(recipe.appliance.toLowerCase())
     })
 
     const appliancesArray = new Set(appliancesBigArray);
@@ -1926,78 +2238,37 @@ function searchAppliances() {
         appliancesList.appendChild(li);
     })
 
-    console.log(appliancesArray);
+    // console.log(appliancesArray);
 }
 
 searchAppliances();
 
-const appliancesInput = document.querySelector(".filters__appareil__head-input");
-const appliancesArrow = document.querySelector(".filters__appareil__head-arrow");
+// ******************************************************************
+// ****** Autosuggestion selon texte tapé dans input appareils ******
+// ******************************************************************
+function hideOrShowAppliances() {
+    const appliancesToHide = document.querySelectorAll(".filters__appareil__list-item");
 
-
-function showAppliances() {
-    ingredientsList.style.height = "0";
-    ustensilsList.style.height = "0";
-    ingredientsList.style.width = "0";
-    ustensilsList.style.width = "0";
-    ingredientsList.style.visibility = "hidden";
-    ustensilsList.style.visibility = "hidden";
-    // ingredientsInput.style.marginTop = "23px";
-    // ingredientsArrow.style.marginTop = "23px";
-    // ingredientsList.style.marginTop = "23px";
-    // appliancesList.style.maxHeight = "397px"
-    // appliancesList.style.maxWidth = "667px";
-    // appliancesList.style.visibility = "visible";
-    // appliancesList.style.width = "667px";
-    // appliancesList.style.height = "auto";
-    appliancesList.classList.remove("animClose");
-    appliancesList.classList.add("animOpen");
+    appliancesToHide.forEach(applianceToHide => {
+        if(!applianceToHide.innerText.includes(appliancesInput.value)) {
+            applianceToHide.style.display = "none";
+        } else {
+            applianceToHide.style.display = "flex";
+        }
+    })
 }
-function hideAppliances() {
-    // ingredientsList.style.display = "none";
-    // filtersUstensilsDiv.style.maxHeight = "397px";
-    // filtersAppliancesDiv.style.maxHeight = "397px";
+appliancesInput.addEventListener("input", hideOrShowAppliances);
 
-    // appliancesList.style.width = "0px";
-    // appliancesList.style.height = "0px";
-    // appliancesList.style.visibility = "hidden";
-    appliancesList.classList.remove("animOpen");
-    appliancesList.classList.add("animClose");
-
-    // ingredientsInput.style.marginTop = "0px";
-    // ingredientsArrow.style.marginTop = "0px";
-    // ingredientsList.style.marginTop = "0px";
-
-    
-    // console.log(appliancesInput.value);
-}
-document.addEventListener("click", function(e) {
-    if (!e.target.classList.contains('filters__appareil__list-item') && !e.target.classList.contains('filters__appareil__head-input')) {
-        // e.preventDefault();
-        // e.stopPropagation();
-        hideAppliances();
-        // console.log(e.target.innerText);
-        // createNewTag(e.target.innerText);
-    }
-
-    if (e.target.classList.contains('filters__appareil__head-input')) {
-        showAppliances();
-    }
-})
-appliancesInput.addEventListener("focus", showAppliances);
-// appliancesInput.addEventListener("blur", hideAppliances);
-appliancesArrow.addEventListener("click", showAppliances);
 
 // ****************************************************************************
 // ******************************Tableau d'ustensiles**************************
 // ****************************************************************************
 const ustensilsBigArray = [];
-const ustensilsList = document.querySelector(".filters__ustensiles__list");
 
 function searchUstensils() {
     recipes.forEach(recipe => {
         recipe.ustensils.forEach(ustensil => {
-            ustensilsBigArray.push(ustensil)
+            ustensilsBigArray.push(ustensil.toLowerCase())
         })
     })
 
@@ -2011,221 +2282,23 @@ function searchUstensils() {
         ustensilsList.appendChild(li);
     })
 
-    console.log(ustensilsArray);
+    // console.log(ustensilsArray);
 }
 
 searchUstensils();
 
-const ustensilsInput = document.querySelector(".filters__ustensiles__head-input");
-const ustensilsArrow = document.querySelector(".filters__ustensiles__head-arrow");
-
-
-ustensilsArrow.addEventListener("click", ustennss)
-function ustennss(){
-    if(ustensilsList.classList.contains("animClose")) {
-        ustensilsList.classList.remove("animClose");
-        ustensilsList.classList.add("animOpen");
-    } else if (ustensilsList.classList.contains("animOpen")) {
-        ustensilsList.classList.remove("animOpen");
-        ustensilsList.classList.add("animClose");
-    }
-}
-
-function showUstensils() {
-    ingredientsList.style.height = "0";
-    appliancesList.style.height = "0";
-    ingredientsList.style.width = "0";
-    appliancesList.style.width = "0";
-    ingredientsList.style.visibility = "hidden";
-    appliancesList.style.visibility = "hidden";
-    // ingredientsInput.style.marginTop = "23px";
-    // ingredientsArrow.style.marginTop = "23px";
-    // ingredientsList.style.marginTop = "23px";
-    // appliancesList.style.maxHeight = "397px"
-    // appliancesList.style.maxWidth = "667px";
-    // ustensilsList.style.visibility = "visible";
-    // ustensilsList.style.width = "667px";
-    // ustensilsList.style.height = "auto";
-    ustensilsList.classList.remove("animClose");
-    ustensilsList.classList.add("animOpen");
-}
-function hideUstensils() {
-    // ingredientsList.style.display = "none";
-    // filtersUstensilsDiv.style.maxHeight = "397px";
-    // filtersAppliancesDiv.style.maxHeight = "397px";
-    // ustensilsList.style.width = "0px";
-    // ustensilsList.style.height = "0px";
-    // ustensilsList.style.visibility = "hidden";
-    // ingredientsInput.style.marginTop = "0px";
-    // ingredientsArrow.style.marginTop = "0px";
-    // ingredientsList.style.marginTop = "0px";
-    ustensilsList.classList.remove("animOpen");
-    ustensilsList.classList.add("animClose");
-}
-ustensilsInput.addEventListener("focus", showUstensils);
-// ustensilsInput.addEventListener("blur", hideUstensils);
-ustensilsArrow.addEventListener("click", showUstensils);
-
-
-document.addEventListener("click", function(e) {
-    if (!e.target.classList.contains('filters__ustensiles__list-item') && !e.target.classList.contains('filters__ustensiles__head-input')) {
-        // e.preventDefault();
-        // e.stopPropagation();
-        hideUstensils();
-        // console.log(e.target.innerText);
-        // createNewTag(e.target.innerText);
-    }
-
-    if (e.target.classList.contains('filters__ustensiles__head')) {
-        showUstensils();
-    }
-})
-
-
-
-
-
-
-
-
-
-
-
-const input = document.querySelector(".search__input");
-
-const enterButton = document.querySelector(".search__logo");
-
-
-let nouveauTag = input.value  ;
-
-
-function createNewTag(tagChoisi, color) {
-
-    const tagList = document.querySelector(`.tag__${color}`);
-    let nouveauTag = tagChoisi;
-
-    let tag = document.createElement("div");
-    tag.setAttribute("class", "tag__" + color + "__item");
-    tag.classList.add("tagAnim");
-
-    let tagName = document.createElement("p");
-    tagName.appendChild(document.createTextNode(tagChoisi));
-
-    let deleteButton = document.createElement("i");
-    deleteButton.setAttribute("class", "far fa-times-circle");
-
-
-
-    tag.appendChild(tagName);
-    tag.appendChild(deleteButton);
-    tagList.appendChild(tag);
-
-    input.value = "";
-
-    deleteButton.addEventListener("click", deleteTag)
-
-    function deleteTag() {
-        
-            tag.style.display = "none"; 
-          
-    }
-console.log(nouveauTag);
-}
-
-
-function addTagAfterClick() {
-
-    if(input.value.length > 0) {
-        createNewTag(input.value, "blue");
-    }
-    console.log(input.value);
-}
-
-function addTagAfterKeypress() {
-    // 13 = touche entrée
-    if(input.value.length > 0 && event.which === 13) {
-        createNewTag(input.value, "blue");
-    }
-}
-
-enterButton.addEventListener("click", addTagAfterClick);
-
-input.addEventListener("keypress", addTagAfterKeypress);
-
-
 // ******************************************************************
-// ********************TAGS INGREDIENTS APPAREILS USTENSILES*********
-// *******************************************************************
+// ***** Autosuggestion selon texte tapé dans input ustensiles ******
+// ******************************************************************
+function hideOrShowUstensiles() {
+    const ustensilsToHide = document.querySelectorAll(".filters__ustensiles__list-item");
 
-
-
-
-document.addEventListener('click', function(e) {
-  if (e.target.classList.contains('filters__ingredients__list-item')) {
-    // e.preventDefault();
-    // e.stopPropagation();
-    console.log(e.target.innerText);
-    createNewTag(e.target.innerText, "blue")
-  }
-  if (e.target.classList.contains('filters__appareil__list-item')) {
-    // e.preventDefault();
-    // e.stopPropagation();
-    console.log(e.target.innerText);
-    createNewTag(e.target.innerText, "green")
-  }
-  if (e.target.classList.contains('filters__ustensiles__list-item')) {
-    // e.preventDefault();
-    // e.stopPropagation();
-    console.log(e.target.innerText);
-    createNewTag(e.target.innerText, "red")
-  }
-});
-
-
-// const arraysForTags = [ustensilsList, appliancesList , ingredientsList];
-
-
-
-// ustensilsTag = ustensilsList.children;
-// // console.log(ustensilsTag);
-
-// Array.from(ustensilsTag).forEach(ustensilTag => {
-    
-
-//     ustensilTag.addEventListener("click", putainDeTag);
-//     // console.log(valeur);
-//     function putainDeTag() {
-//             // valeur.preventDefault();
-//             let tagChoisi = `<div class="tag__item">
-//                     <p>${this.innerHTML}</p>
-//                     <i class="far fa-times-circle"></i>
-//                 </div>`
-//             tagList.appendChild(tagChoisi);
-    
-//             console.log(this.innerHTML);
-        
-//     }
-
-// })
-
-// for(let u = 0; u < ustensilsTag.length; u ++) {
-//     ustensilsTag[u].onclick = createNewTag;
-
-//     console.log(ustensilsTag[u].innerText);
-// }
-
-// ustensilsTag.onclick = createNewTag(ustensilsTag.innerText);
-// console.log(ustensilsTag);
-
-// arraysForTags.forEach(arrayForTag => {
-//     const tagsToChoose = arrayForTag.children;
-//     // console.log(tagToChoose);
-//     // Array.from(tagsToChoose).forEach(tagToChoose => {
-//     //     tagToChoose.addEventListener("click", createNewTag(tagToChoose.innerText));
-//         console.log(Array.from(tagsToChoose));
-//     // })
-//     for(t = 0; t < tagsToChoose.length; t++) {
-//         tagsToChoose[t].addEventListener("click", createNewTag(tagsToChoose[t].innerText));
-//         console.log(Array.from(t));
-//     }
-// })
+    ustensilsToHide.forEach(ustensilToHide => {
+        if(!ustensilToHide.innerText.includes(ustensilsInput.value)) {
+            ustensilToHide.style.display = "none";
+        } else {
+            ustensilToHide.style.display = "flex";
+        }
+    })
+}
+ustensilsInput.addEventListener("input", hideOrShowUstensiles);
