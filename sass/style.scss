@@ -30,6 +30,7 @@ body {
     box-sizing: border-box;
     max-width: 1240px;
     font-size: 12px;
+    position: relative;
 }
 
 header {
@@ -93,7 +94,7 @@ header {
 }
 
 .inputOpen {
-    animation: inputOpen 0.6s forwards;
+    animation: inputOpen 0.4s forwards;
 }
 
 @keyframes inputOpen {
@@ -106,7 +107,7 @@ header {
 }
 
 .inputClose {
-    animation: inputClose 0.9s forwards;
+    animation: inputClose 0.7s forwards;
 }
 
 @keyframes inputClose {
@@ -119,7 +120,7 @@ header {
 }
 
 .animOpen {
-    animation: animOpen 0.6s forwards;
+    animation: animOpen 0.4s forwards;
 }
 
 @keyframes animOpen {
@@ -138,7 +139,7 @@ header {
     }
 }
 .animClose {
-    animation: animClose 0.9s forwards;
+    animation: animClose 0.7s forwards;
 }
 
 @keyframes animClose {
@@ -433,6 +434,7 @@ header {
 
                     &:focus::placeholder {
                         color: $primary;
+                        font-size: 1.3rem;
                     }
             }
 
@@ -705,12 +707,32 @@ header {
 // .hide {
 //     display: none;
 // }
+
+@keyframes recipeAnim {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.recipeAnim {
+    transform: translateY(100px);
+        opacity: 0;
+        animation: recipeAnim 0.5s forwards;
+        animation-delay: 300ms;
+}
+
 .recipes {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 25px;
+    // position: absolute;
 
     &__sample {
         width: 380px;
@@ -724,6 +746,8 @@ header {
         box-shadow: -2px 5px 10px #a39b9b,
                     -2px 5px 20px $primary,
                     -2px 5px 30px $primary;
+
+        
 
         &:hover {
             box-shadow: -7px 10px 10px #a39b9b,
@@ -768,6 +792,10 @@ header {
                     font-size: 1.5rem;
                     margin-top: 20px;
                     // margin-bottom: 25px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 70%;
                 }
 
                 
@@ -806,11 +834,13 @@ header {
                     @extend .lato700;
                     padding-left: 20px;
                     // line-height: 0.1;
+                    white-space: nowrap
                 }
 
                 .quantity {
                     @extend .lato400;
                     margin-left: 3px;
+                    margin-right: 10px;
                 }
 
                 .instruction {
@@ -819,10 +849,22 @@ header {
                     font-size: 1rem;
                     font-variation-settings: 'wght' 600;
                     line-height: 1;
-                    margin-top: 15px;
+                    // margin-top: 15px;
                     width: 190px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 9;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;   
                 }
             }
         }
     }
+}
+
+.error {
+    display: none;
+}
+
+.showError {
+    display: flex;
 }

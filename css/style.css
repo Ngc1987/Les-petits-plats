@@ -30,6 +30,7 @@ body {
   box-sizing: border-box;
   max-width: 1240px;
   font-size: 12px;
+  position: relative;
 }
 
 header {
@@ -81,7 +82,7 @@ header {
 }
 
 .inputOpen {
-  animation: inputOpen 0.6s forwards;
+  animation: inputOpen 0.4s forwards;
 }
 
 @keyframes inputOpen {
@@ -93,7 +94,7 @@ header {
   }
 }
 .inputClose {
-  animation: inputClose 0.9s forwards;
+  animation: inputClose 0.7s forwards;
 }
 
 @keyframes inputClose {
@@ -105,7 +106,7 @@ header {
   }
 }
 .animOpen {
-  animation: animOpen 0.6s forwards;
+  animation: animOpen 0.4s forwards;
 }
 
 @keyframes animOpen {
@@ -124,7 +125,7 @@ header {
   }
 }
 .animClose {
-  animation: animClose 0.9s forwards;
+  animation: animClose 0.7s forwards;
 }
 
 @keyframes animClose {
@@ -338,6 +339,7 @@ header {
 }
 .filters__ingredients__head-input:focus::placeholder {
   color: #e7e7e7;
+  font-size: 1.3rem;
 }
 .filters__ingredients__head-arrow {
   font-size: 1.7rem;
@@ -533,6 +535,22 @@ header {
   cursor: pointer;
 }
 
+@keyframes recipeAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.recipeAnim {
+  transform: translateY(100px);
+  opacity: 0;
+  animation: recipeAnim 0.5s forwards;
+  animation-delay: 300ms;
+}
+
 .recipes {
   display: flex;
   flex-direction: row;
@@ -583,6 +601,10 @@ header {
 .recipes__sample__foot-title h2 {
   font-size: 1.5rem;
   margin-top: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 70%;
 }
 .recipes__sample__foot-title .time {
   font-size: 1.5rem;
@@ -605,17 +627,30 @@ header {
 }
 .recipes__sample__foot-details .ingredient {
   padding-left: 20px;
+  white-space: nowrap;
 }
 .recipes__sample__foot-details .quantity {
   margin-left: 3px;
+  margin-right: 10px;
 }
 .recipes__sample__foot-details .instruction {
   padding-right: 20px;
   font-size: 1rem;
   font-variation-settings: "wght" 600;
   line-height: 1;
-  margin-top: 15px;
   width: 190px;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.error {
+  display: none;
+}
+
+.showError {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
