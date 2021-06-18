@@ -91,6 +91,33 @@ header {
         cursor: pointer;
     }
 }
+
+.inputOpen {
+    animation: inputOpen 0.6s forwards;
+}
+
+@keyframes inputOpen {
+    0% {
+        width: 170px;
+    }
+    100% {
+        width: 662px;
+    }
+}
+
+.inputClose {
+    animation: inputClose 0.9s forwards;
+}
+
+@keyframes inputClose {
+    0% {
+        width: 662px;
+    }
+    100% {
+        width: 170px;
+    }
+}
+
 .animOpen {
     animation: animOpen 0.6s forwards;
 }
@@ -106,7 +133,7 @@ header {
         visibility: visible;
         width: 667px;
         height: auto;
-        max-height: 320px;
+        max-height: 335px;
         opacity: 1;
     }
 }
@@ -332,6 +359,16 @@ header {
     }
 }
 
+.blueShadow {
+    box-shadow: 0px 0px 5px $secondary,
+                0px 0px 10px $secondary,
+                0px 0px 15px $secondary;
+}
+
+// .noShadow {
+//     box-shadow: unset;
+// }
+
 .filters {
     margin-top: 20px;
     display: flex;
@@ -350,7 +387,8 @@ header {
         height: max-content;
         cursor: pointer;
         transition: all 0.4s ease;
-        overflow: hidden;
+        // overflow: hidden;
+        position: relative;
 
         &:hover {
             box-shadow: 0px 0px 5px $secondary,
@@ -428,6 +466,15 @@ header {
             height: 0;
             transition: all 0.5s;
             // z-index: 1;
+            position: absolute;
+            top: 77px;
+            overflow: hidden;
+            background-color: $secondary;
+            z-index: 100;
+
+            &:hover {
+                box-shadow: inherit;
+            }
 
             &-item {
                 @extend .lato400;
@@ -527,6 +574,7 @@ header {
             width: 0;
             height: 0;
             transition: all 0.5s;
+            z-index: 100;
 
             &-item {
                 @extend .lato400;
@@ -631,6 +679,7 @@ header {
             visibility: hidden;
             width: 0;
             height: 0;
+            z-index: 100;
 
             &-item {
                 @extend .lato400;

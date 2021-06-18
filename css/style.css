@@ -80,6 +80,30 @@ header {
   cursor: pointer;
 }
 
+.inputOpen {
+  animation: inputOpen 0.6s forwards;
+}
+
+@keyframes inputOpen {
+  0% {
+    width: 170px;
+  }
+  100% {
+    width: 662px;
+  }
+}
+.inputClose {
+  animation: inputClose 0.9s forwards;
+}
+
+@keyframes inputClose {
+  0% {
+    width: 662px;
+  }
+  100% {
+    width: 170px;
+  }
+}
 .animOpen {
   animation: animOpen 0.6s forwards;
 }
@@ -95,7 +119,7 @@ header {
     visibility: visible;
     width: 667px;
     height: auto;
-    max-height: 320px;
+    max-height: 335px;
     opacity: 1;
   }
 }
@@ -259,6 +283,10 @@ header {
   box-shadow: 0px 0px 10px white, 0px 0px 20px #e7e7e7, 0px 0px 30px #e7e7e7, inset 0px 0px 3px white, inset 0px 0px 6px #e7e7e7, inset 0px 0px 9px #e7e7e7;
 }
 
+.blueShadow {
+  box-shadow: 0px 0px 5px #3282f7, 0px 0px 10px #3282f7, 0px 0px 15px #3282f7;
+}
+
 .filters {
   margin-top: 20px;
   display: flex;
@@ -277,7 +305,7 @@ header {
   height: max-content;
   cursor: pointer;
   transition: all 0.4s ease;
-  overflow: hidden;
+  position: relative;
 }
 .filters__ingredients:hover {
   box-shadow: 0px 0px 5px #3282f7, 0px 0px 10px #3282f7, 0px 0px 15px #3282f7;
@@ -332,6 +360,14 @@ header {
   width: 0;
   height: 0;
   transition: all 0.5s;
+  position: absolute;
+  top: 77px;
+  overflow: hidden;
+  background-color: #3282f7;
+  z-index: 100;
+}
+.filters__ingredients__list:hover {
+  box-shadow: inherit;
 }
 .filters__ingredients__list-item {
   font-size: 1.5rem;
@@ -408,6 +444,7 @@ header {
   width: 0;
   height: 0;
   transition: all 0.5s;
+  z-index: 100;
 }
 .filters__appareil__list-item {
   font-size: 1.5rem;
@@ -486,6 +523,7 @@ header {
   visibility: hidden;
   width: 0;
   height: 0;
+  z-index: 100;
 }
 .filters__ustensiles__list-item {
   font-size: 1.5rem;
