@@ -14,7 +14,7 @@
   font-weight: 700;
 }
 
-.lato400, .recipes__sample__foot-details .quantity, .recipes__sample__foot-title h2, .filters__ustensiles__list-item, .filters__appareil__list-item, .filters__ingredients__list-item, .search__input {
+.lato400, #error, .recipes__sample__foot-details .quantity, .recipes__sample__foot-title h2, .filters__ustensiles__list-item, .filters__appareil__list-item, .filters__ingredients__list-item, .search__input {
   font-family: lato;
   font-weight: 400;
 }
@@ -79,6 +79,10 @@ header {
   font-size: 2.5rem;
   font-weight: lighter;
   cursor: pointer;
+  transition: all 0.4s ease;
+}
+.search__logo:hover {
+  transform: scale(1.1);
 }
 
 .inputOpen {
@@ -288,6 +292,38 @@ header {
   box-shadow: 0px 0px 5px #3282f7, 0px 0px 10px #3282f7, 0px 0px 15px #3282f7;
 }
 
+.greenShadow {
+  box-shadow: 0px 0px 5px #68d9a4, 0px 0px 10px #68d9a4, 0px 0px 15px #68d9a4;
+}
+
+.redShadow {
+  box-shadow: 0px 0px 5px #ed6454, 0px 0px 10px #ed6454, 0px 0px 15px #ed6454;
+}
+
+.openArrow {
+  animation: openArrow 1s ease forwards;
+}
+
+.closeArrow {
+  animation: closeArrow 1s ease forwards;
+}
+
+@keyframes openArrow {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes closeArrow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
 .filters {
   margin-top: 20px;
   display: flex;
@@ -355,17 +391,18 @@ header {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-color: #3282f7;
+  color: #fff;
   padding-left: 15px;
   margin-top: -10px;
   line-height: 2.5rem;
+  transition: all 0.5s;
   visibility: hidden;
   width: 0;
   height: 0;
-  transition: all 0.5s;
   position: absolute;
   top: 77px;
   overflow: hidden;
-  background-color: #3282f7;
   z-index: 100;
 }
 .filters__ingredients__list:hover {
@@ -384,16 +421,14 @@ header {
   color: #fff;
   display: flex;
   flex-direction: column;
-  height: max-content;
   width: auto;
+  height: max-content;
   margin-left: 20px;
+  cursor: pointer;
   transition: all 0.4s ease;
-  overflow: hidden;
+  position: relative;
 }
 .filters__appareil:hover {
-  box-shadow: 0px 0px 5px #68d9a4, 0px 0px 10px #68d9a4, 0px 0px 15px #68d9a4;
-}
-.filters__appareil:focus {
   box-shadow: 0px 0px 5px #68d9a4, 0px 0px 10px #68d9a4, 0px 0px 15px #68d9a4;
 }
 .filters__appareil__head {
@@ -424,6 +459,7 @@ header {
 }
 .filters__appareil__head-input:focus::placeholder {
   color: #e7e7e7;
+  font-size: 1.3rem;
 }
 .filters__appareil__head-arrow {
   font-size: 1.7rem;
@@ -439,14 +475,22 @@ header {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-color: #68d9a4;
+  color: #fff;
   padding-left: 15px;
   margin-top: -10px;
   line-height: 2.5rem;
+  transition: all 0.5s;
   visibility: hidden;
   width: 0;
   height: 0;
-  transition: all 0.5s;
   z-index: 100;
+  position: absolute;
+  top: 77px;
+  overflow: hidden;
+}
+.filters__appareil__list:hover {
+  box-shadow: inherit;
 }
 .filters__appareil__list-item {
   font-size: 1.5rem;
@@ -461,16 +505,14 @@ header {
   color: #fff;
   display: flex;
   flex-direction: column;
-  height: max-content;
   width: auto;
+  height: max-content;
+  cursor: pointer;
   margin-left: 20px;
   transition: all 0.4s ease;
-  overflow: hidden;
+  position: relative;
 }
 .filters__ustensiles:hover {
-  box-shadow: 0px 0px 5px #ed6454, 0px 0px 10px #ed6454, 0px 0px 15px #ed6454;
-}
-.filters__ustensiles:focus {
   box-shadow: 0px 0px 5px #ed6454, 0px 0px 10px #ed6454, 0px 0px 15px #ed6454;
 }
 .filters__ustensiles__head {
@@ -501,6 +543,7 @@ header {
 }
 .filters__ustensiles__head-input:focus::placeholder {
   color: #e7e7e7;
+  font-size: 1.3rem;
 }
 .filters__ustensiles__head-arrow {
   font-size: 1.7rem;
@@ -526,6 +569,12 @@ header {
   width: 0;
   height: 0;
   z-index: 100;
+  position: absolute;
+  top: 77px;
+  overflow: hidden;
+}
+.filters__ustensiles__list:hover {
+  box-shadow: inherit;
 }
 .filters__ustensiles__list-item {
   font-size: 1.5rem;
@@ -645,12 +694,17 @@ header {
   overflow: hidden;
 }
 
-.error {
+#error {
   display: none;
-}
-
-.showError {
-  display: flex;
+  color: #3282f7;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
