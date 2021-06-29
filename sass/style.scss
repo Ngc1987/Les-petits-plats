@@ -499,7 +499,8 @@ header {
         flex-direction: column;
         height: max-content;
         width: auto;
-        margin-left: 20px;transition: all 0.4s ease;
+        margin-left: 20px;
+        transition: all 0.4s ease;
         overflow: hidden;
 
         &:hover {
@@ -863,8 +864,9 @@ header {
 
 .error {
     display: none;
-}
-
-.showError {
-    display: flex;
+    font-size: 2rem;
+    color: $secondary;
+    // font-weight: bold;
+    // display: flex;
+    @extend .lato700;   
 }
