@@ -1838,7 +1838,7 @@ function getTagsSearchResults() {
                         compteurIng++;
                         // console.log(compteurIng);
                     }
-                    if (compteurIng == ingTags.length) {
+                    if (compteurIng === ingTags.length) {
                         testIng = true;
                     } else {
                         testIng = false;
@@ -1920,7 +1920,7 @@ function refreshSearch() {
     const errorMsg = document.querySelector(".error");
 
     function error() {
-        if(Array.from(filteredRecipes).length < 1) {
+        if (Array.from(filteredRecipes).length < 1) {
             errorMsg.style.display = "flex";
         } else {
             errorMsg.style.display = "none";
@@ -2118,9 +2118,11 @@ const ustensilsArrow = document.querySelector(".filters__ustensiles__head-arrow"
 function blueShadow() {
     ingredientsDiv.classList.add("blueShadow")
 }
+
 function greenShadow() {
     appliancesDiv.classList.add("greenShadow")
 }
+
 function redShadow() {
     ustensilsDiv.classList.add("redShadow")
 }
@@ -2128,9 +2130,11 @@ function redShadow() {
 function noBlueShadow() {
     ingredientsDiv.classList.remove("blueShadow")
 }
+
 function noGreenShadow() {
     appliancesDiv.classList.remove("greenShadow")
 }
+
 function noRedShadow() {
     ustensilsDiv.classList.remove("redShadow")
 }
@@ -2490,5 +2494,3 @@ ustensilsInput.addEventListener("input", hideOrShowUstensiles);
 
 
 console.log(ingTags.length);
-
-
