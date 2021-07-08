@@ -1778,26 +1778,43 @@ const recipeSamples = document.querySelectorAll(".recipes__sample");
 let filteredRecipes = [];
 
 
-function getInputSearchResults() {
 
-    let tableauDeRecettes = [];
-
-    recipes.forEach((obj) => {
+function getInputSearchResultsAlt() {
+    return recipes.filter((obj) => {
         if (input.value.length > 2) {
             // Si la valeur saisie dans l'input existe dans le titre, la description ou un ingredient de la recette, la recette reste apparente, sinon elle disparaît
             if (
                 obj.name.toLowerCase().includes(input.value.toLowerCase()) ||
                 obj.description.toLowerCase().includes(input.value.toLowerCase()) ||
-                obj.ingredients.join(" ").includes(input.value.toLowerCase())
-
+                obj.ingredients.map(ing => ing.ingredient.toLowerCase()).join(" ").includes(input.value.toLowerCase())
             ) {
-                tableauDeRecettes.push(obj)
+                return true
+            }
+            return false
+        }
+        return true
+    })
+}
+
+
+function getInputSearchResults() {
+
+    const filteredRecipesByInput = recipes.reduce((acc, recipe) => {
+
+        if(input.value.length > 2) {
+            if (
+                recipe.name.toLowerCase().includes(input.value.toLowerCase()) ||
+                recipe.description.toLowerCase().includes(input.value.toLowerCase()) ||
+                recipe.ingredients.map(ing => ing.ingredient.toLowerCase()).join(" ").includes(input.value.toLowerCase())
+            ) {
+                acc.push(recipe);
             }
         } else {
-            tableauDeRecettes.push(obj)
-        }
-    })
-    return tableauDeRecettes;
+            acc.push(recipe);
+        } 
+        return acc;
+    }, [])
+    return filteredRecipesByInput;
 }
 
 
@@ -1821,7 +1838,7 @@ function getTagsSearchResults() {
                         compteurIng++;
                         // console.log(compteurIng);
                     }
-                    if (compteurIng == ingTags.length) {
+                    if (compteurIng === ingTags.length) {
                         testIng = true;
                     } else {
                         testIng = false;
@@ -1899,6 +1916,18 @@ function refreshSearch() {
     filterIngredients();
     filterAppliances();
     filterUstensils();
+
+    // const errorMsg = document.querySelector(".error");
+
+    // function error() {
+    //     if (Array.from(filteredRecipes).length < 1) {
+    //         errorMsg.style.display = "flex";
+    //     } else {
+    //         errorMsg.style.display = "none";
+    //     }
+    // }
+
+    // error();
 }
 
 
@@ -1963,7 +1992,7 @@ function createNewHtmlTag(tagChoisi, color) {
     tag.appendChild(deleteButton);
     tagList.appendChild(tag);
 
-    input.value = "";
+    // input.value = "";
 
     deleteButton.addEventListener("click", deleteTag)
 
@@ -2068,11 +2097,16 @@ function showIngredientsInput() {
 // ********** de recherche avancée ingrédients, appareils et ustensiles **********
 // *******************************************************************************
 const ingredientsDiv = document.querySelector(".filters__ingredients");
+const appliancesDiv = document.querySelector(".filters__appareil");
+const ustensilsDiv = document.querySelector(".filters__ustensiles");
+
 const ingredientsInputHead = document.querySelector(".filters__ingredients__head");
 const ingredientsInput = document.querySelector(".filters__ingredients__head-input");
 const ingredientsArrow = document.querySelector(".filters__ingredients__head-arrow");
+const appliancesInputHead = document.querySelector(".filters__appareil__head");
 const appliancesInput = document.querySelector(".filters__appareil__head-input");
 const appliancesArrow = document.querySelector(".filters__appareil__head-arrow");
+const ustensilsInputHead = document.querySelector(".filters__ustensiles__head");
 const ustensilsInput = document.querySelector(".filters__ustensiles__head-input");
 const ustensilsArrow = document.querySelector(".filters__ustensiles__head-arrow");
 
@@ -2085,8 +2119,24 @@ function blueShadow() {
     ingredientsDiv.classList.add("blueShadow")
 }
 
-function noShadow() {
+function greenShadow() {
+    appliancesDiv.classList.add("greenShadow")
+}
+
+function redShadow() {
+    ustensilsDiv.classList.add("redShadow")
+}
+
+function noBlueShadow() {
     ingredientsDiv.classList.remove("blueShadow")
+}
+
+function noGreenShadow() {
+    appliancesDiv.classList.remove("greenShadow")
+}
+
+function noRedShadow() {
+    ustensilsDiv.classList.remove("redShadow")
 }
 
 function showIngredients() {
@@ -2107,6 +2157,9 @@ function showIngredients() {
 
     ingredientsInput.setAttribute("placeholder", "Rechercher un ingrédient");
 
+    ingredientsArrow.classList.remove("closeArrow");
+    ingredientsArrow.classList.add("openArrow");
+
     blueShadow();
 }
 
@@ -2119,12 +2172,15 @@ function hideIngredients() {
 
     ingredientsInput.setAttribute("placeholder", "Ingrédients");
 
-    noShadow();
+    ingredientsArrow.classList.remove("openArrow");
+    ingredientsArrow.classList.add("closeArrow");
+
+    noBlueShadow();
 }
 
 document.addEventListener("click", function (e) {
 
-    if (!e.target.classList.contains('filters__ingredients__list-item') && !e.target.classList.contains('filters__ingredients__head-input')) {
+    if (!e.target.classList.contains('filters__ingredients__list-item') && !e.target.classList.contains('filters__ingredients__head-input') && ingredientsList.classList.contains("animOpen")) {
         hideIngredients();
     }
 
@@ -2151,22 +2207,39 @@ function showAppliances() {
     ustensilsList.style.height = "0";
     ustensilsList.style.visibility = "hidden";
 
+    appliancesInputHead.classList.remove("inputClose");
+    appliancesInputHead.classList.add("inputOpen");
+
+    appliancesList.style.boxShadow = "0px 0px 5px #68d9a4,0px 0px 10px #68d9a4,0px 0px 15px #68d9a4";
     appliancesList.classList.remove("animClose");
     appliancesList.classList.add("animOpen");
 
     appliancesInput.setAttribute("placeholder", "Rechercher un appareil");
+
+    appliancesArrow.classList.remove("closeArrow");
+    appliancesArrow.classList.add("openArrow");
+
+    greenShadow();
 }
 
 function hideAppliances() {
+    appliancesInputHead.classList.remove("inputOpen");
+    appliancesInputHead.classList.add("inputClose");
+
     appliancesList.classList.remove("animOpen");
     appliancesList.classList.add("animClose");
 
     appliancesInput.setAttribute("placeholder", "Appareils");
+
+    appliancesArrow.classList.remove("openArrow");
+    appliancesArrow.classList.add("closeArrow");
+
+    noGreenShadow();
 }
 
 document.addEventListener("click", function (e) {
 
-    if (!e.target.classList.contains('filters__appareil__list-item') && !e.target.classList.contains('filters__appareil__head-input')) {
+    if (!e.target.classList.contains('filters__appareil__list-item') && !e.target.classList.contains('filters__appareil__head-input') && appliancesList.classList.contains("animOpen")) {
         hideAppliances();
     }
 
@@ -2191,17 +2264,34 @@ function showUstensils() {
     appliancesList.style.height = "0";
     appliancesList.style.visibility = "hidden";
 
+    ustensilsInputHead.classList.remove("inputClose");
+    ustensilsInputHead.classList.add("inputOpen");
+
+    ustensilsList.style.boxShadow = "0px 0px 5px #ed6454,0px 0px 10px #ed6454,0px 0px 15px #ed6454";
     ustensilsList.classList.remove("animClose");
     ustensilsList.classList.add("animOpen");
 
     ustensilsInput.setAttribute("placeholder", "Rechercher un ustensile");
+
+    ustensilsArrow.classList.remove("closeArrow");
+    ustensilsArrow.classList.add("openArrow");
+
+    redShadow();
 }
 
 function hideUstensils() {
+    ustensilsInputHead.classList.remove("inputOpen");
+    ustensilsInputHead.classList.add("inputClose");
+
     ustensilsList.classList.remove("animOpen");
     ustensilsList.classList.add("animClose");
 
     ustensilsInput.setAttribute("placeholder", "Ustensiles");
+
+    ustensilsArrow.classList.remove("openArrow");
+    ustensilsArrow.classList.add("closeArrow");
+
+    noRedShadow();
 }
 
 ustensilsInput.addEventListener("focus", showUstensils);
@@ -2210,7 +2300,7 @@ ustensilsArrow.addEventListener("click", showUstensils);
 
 document.addEventListener("click", function (e) {
 
-    if (!e.target.classList.contains('filters__ustensiles__list-item') && !e.target.classList.contains('filters__ustensiles__head-input')) {
+    if (!e.target.classList.contains('filters__ustensiles__list-item') && !e.target.classList.contains('filters__ustensiles__head-input') && ustensilsList.classList.contains("animOpen")) {
         hideUstensils();
     }
 
