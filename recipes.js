@@ -104,10 +104,11 @@ const recipeSamples = document.querySelectorAll(".recipes__sample");
 
 let filteredRecipes = [];
 
+function getInputSearchResults() {
 
+    let tableauDeRecettes = [];
 
-function getInputSearchResultsAlt() {
-    return recipes.filter((obj) => {
+    recipes.forEach((obj) => {
         if (input.value.length > 2) {
             // Si la valeur saisie dans l'input existe dans le titre, la description ou un ingredient de la recette, la recette reste apparente, sinon elle disparaît
             if (
@@ -115,34 +116,52 @@ function getInputSearchResultsAlt() {
                 obj.description.toLowerCase().includes(input.value.toLowerCase()) ||
                 obj.ingredients.map(ing => ing.ingredient.toLowerCase()).join(" ").includes(input.value.toLowerCase())
             ) {
-                return true
-            }
-            return false
-        }
-        return true
-    })
-}
-
-
-function getInputSearchResults() {
-
-    const filteredRecipesByInput = recipes.reduce((acc, recipe) => {
-
-        if(input.value.length > 2) {
-            if (
-                recipe.name.toLowerCase().includes(input.value.toLowerCase()) ||
-                recipe.description.toLowerCase().includes(input.value.toLowerCase()) ||
-                recipe.ingredients.map(ing => ing.ingredient.toLowerCase()).join(" ").includes(input.value.toLowerCase())
-            ) {
-                acc.push(recipe);
+                tableauDeRecettes.push(obj)
             }
         } else {
-            acc.push(recipe);
-        } 
-        return acc;
-    }, [])
-    return filteredRecipesByInput;
+            tableauDeRecettes.push(obj)
+        }
+    })
+    return tableauDeRecettes;
 }
+
+// function getInputSearchResultsAlt() {
+//     return recipes.filter((obj) => {
+//         if (input.value.length > 2) {
+//             // Si la valeur saisie dans l'input existe dans le titre, la description ou un ingredient de la recette, la recette reste apparente, sinon elle disparaît
+//             if (
+//                 obj.name.toLowerCase().includes(input.value.toLowerCase()) ||
+//                 obj.description.toLowerCase().includes(input.value.toLowerCase()) ||
+//                 obj.ingredients.map(ing => ing.ingredient.toLowerCase()).join(" ").includes(input.value.toLowerCase())
+//             ) {
+//                 return true
+//             }
+//             return false
+//         }
+//         return true
+//     })
+// }
+
+
+// function getInputSearchResults() {
+
+//     const filteredRecipesByInput = recipes.reduce((acc, recipe) => {
+
+//         if(input.value.length > 2) {
+//             if (
+//                 recipe.name.toLowerCase().includes(input.value.toLowerCase()) ||
+//                 recipe.description.toLowerCase().includes(input.value.toLowerCase()) ||
+//                 recipe.ingredients.map(ing => ing.ingredient.toLowerCase()).join(" ").includes(input.value.toLowerCase())
+//             ) {
+//                 acc.push(recipe);
+//             }
+//         } else {
+//             acc.push(recipe);
+//         } 
+//         return acc;
+//     }, [])
+//     return filteredRecipesByInput;
+// }
 
 
 function getTagsSearchResults() {
