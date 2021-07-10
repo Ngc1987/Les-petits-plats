@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import "./Abstracts/variables.scss";
 
 
@@ -41,9 +42,31 @@ header {
 }
 
 #logo {
-    background: url(../svg/logo.svg) center center no-repeat;
-    width: 268px;
-    height: 93px;
+    background: url(../svg/minilogo.svg) center center no-repeat;
+    width: 52px;
+    height: 47px;
+    margin: 0;
+}
+
+#logoLink {
+    width: 300px;
+    height: 150px;
+    margin-top: -50px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: -70px;
+    color: #d04f4f;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 3rem;
 }
 
 .search {
@@ -161,12 +184,6 @@ header {
     }
 }
 
-// i {
-//     background-color: #FBBB73;
-// }
-
-
-
 .tagAnim {
     animation: tagAnim 1.2s cubic-bezier(0.09, 0.65, 0.29, 0.96) forwards;
 }
@@ -210,10 +227,8 @@ header {
             color: #fff;
             font-size: 1.2rem;
             border-radius: 5px;
-            // transform: translateX(10px);
             @extend .lato700;
             transition: all 0.4s ease;
-            // transform: scale(1);
 
             &:hover {
                 box-shadow: 0px 0px 3px $secondary,
@@ -234,7 +249,6 @@ header {
                 transition: all 0.4s ease;
                 background-color: transparent;
                 border-radius: 50%;
-            // transform: scale(1);
             
                 &:hover {
                 box-shadow: 0px 0px 10px white,
@@ -242,8 +256,7 @@ header {
                             0px 0px 30px $primary,
                         inset    0px 0px 3px white,
                         inset    0px 0px 6px $primary,
-                        inset    0px 0px 9px $primary;
-                            // transform: scale(1.05);          
+                        inset    0px 0px 9px $primary;       
                 }
             }
         }
@@ -289,7 +302,6 @@ header {
                 transition: all 0.4s ease;
                 background-color: transparent;
                 border-radius: 50%;
-            // transform: scale(1);
             
                 &:hover {
                 box-shadow: 0px 0px 10px white,
@@ -297,8 +309,7 @@ header {
                             0px 0px 30px $primary,
                         inset    0px 0px 3px white,
                         inset    0px 0px 6px $primary,
-                        inset    0px 0px 9px $primary;
-                            // transform: scale(1.05);          
+                        inset    0px 0px 9px $primary;       
                 }
             }
         }
@@ -344,7 +355,6 @@ header {
                 transition: all 0.4s ease;
                 background-color: transparent;
                 border-radius: 50%;
-            // transform: scale(1);
             
                 &:hover {
                 box-shadow: 0px 0px 10px white,
@@ -352,8 +362,7 @@ header {
                             0px 0px 30px $primary,
                         inset    0px 0px 3px white,
                         inset    0px 0px 6px $primary,
-                        inset    0px 0px 9px $primary;
-                            // transform: scale(1.05);          
+                        inset    0px 0px 9px $primary;         
                 }
             }
         }
@@ -365,10 +374,23 @@ header {
                 0px 0px 10px $secondary,
                 0px 0px 15px $secondary;
 }
+.greenShadow {
+    box-shadow: 0px 0px 5px $tertiary,
+                0px 0px 10px $tertiary,
+                0px 0px 15px $tertiary;
+}
+.redShadow {
+    box-shadow: 0px 0px 5px $quartiary,
+                0px 0px 10px $quartiary,
+                0px 0px 15px $quartiary;
+}
 
-// .noShadow {
-//     box-shadow: unset;
-// }
+.openArrow {
+    transform: rotate(0deg);
+}
+.closeArrow {
+    transform: rotate(180deg);
+}
 
 .filters {
     margin-top: 20px;
@@ -388,7 +410,6 @@ header {
         height: max-content;
         cursor: pointer;
         transition: all 0.4s ease;
-        // overflow: hidden;
         position: relative;
 
         &:hover {
@@ -396,12 +417,6 @@ header {
                         0px 0px 10px $secondary,
                         0px 0px 15px $secondary;
         }
-        // &:focus {
-        //     box-shadow: 0px 0px 5px $secondary,
-        //                 0px 0px 10px $secondary,
-        //                 0px 0px 15px $secondary;
-        //                 transform: scale(1.2);
-        // }
 
         &__head {
             display: flex;
@@ -441,12 +456,7 @@ header {
             &-arrow {
                 font-size: 1.7rem;
                 margin-right: 10px;
-                transform: rotate(180deg);
-                transition: all 0.5s ease;
-
-                &:hover {
-                    transform: rotate(0deg);
-                }
+                transition: all 1s ease;
             }
         }
 
@@ -455,19 +465,13 @@ header {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
-            // width: auto;
-            // max-width: 667px;
-            // max-height: 397px;
             padding-left: 15px;
             margin-top: -10px;
             line-height: 2.5rem;
-
-            // display: none;
             visibility: hidden;
             width: 0;
             height: 0;
             transition: all 0.5s;
-            // z-index: 1;
             position: absolute;
             top: 77px;
             overflow: hidden;
@@ -483,10 +487,8 @@ header {
                 font-size: 1.5rem;
                 list-style-type: none;
                 width: 33%;
-                // padding-bottom: 5px;
                 max-height: 50px;
                 cursor: pointer;
-                // z-index: 10000;
                 
             }
         }
@@ -497,17 +499,14 @@ header {
         color: #fff;
         display: flex;
         flex-direction: column;
-        height: max-content;
         width: auto;
-        margin-left: 20px;transition: all 0.4s ease;
-        overflow: hidden;
+        height: max-content;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        margin-left: 20px;
+        position: relative;
 
         &:hover {
-            box-shadow: 0px 0px 5px $tertiary,
-                        0px 0px 10px $tertiary,
-                        0px 0px 15px $tertiary;
-        }
-        &:focus {
             box-shadow: 0px 0px 5px $tertiary,
                         0px 0px 10px $tertiary,
                         0px 0px 15px $tertiary;
@@ -544,18 +543,14 @@ header {
 
                     &:focus::placeholder {
                         color: $primary;
+                        font-size: 1.3rem;
                     }
             }
 
             &-arrow {
                 font-size: 1.7rem;
                 margin-right: 10px;
-                transform: rotate(180deg);
-                transition: all 0.5s ease;
-
-                &:hover {
-                    transform: rotate(0deg);
-                }
+                transition: all 1s ease;
             }
         }
 
@@ -564,18 +559,17 @@ header {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
-            // width: auto;
-            // max-width: 667px;
-            // max-height: 397px;
             padding-left: 15px;
             margin-top: -10px;
             line-height: 2.5rem;
-
-            // display: none;
             visibility: hidden;
             width: 0;
             height: 0;
             transition: all 0.5s;
+            position: absolute;
+            top: 77px;
+            overflow: hidden;
+            background-color: $tertiary;
             z-index: 100;
 
             &-item {
@@ -583,10 +577,8 @@ header {
                 font-size: 1.5rem;
                 list-style-type: none;
                 width: 33%;
-                // padding-bottom: 5px;
                 max-height: 50px;
                 cursor: pointer;
-                
             }
         }
     }
@@ -596,17 +588,13 @@ header {
         color: #fff;
         display: flex;
         flex-direction: column;
-        height: max-content;
         width: auto;
-        margin-left: 20px;transition: all 0.4s ease;
-        overflow: hidden;
+        height: max-content;
+        margin-left: 20px;
+        transition: all 0.4s ease;
+        position: relative;
 
         &:hover {
-            box-shadow: 0px 0px 5px $quartiary,
-                        0px 0px 10px $quartiary,
-                        0px 0px 15px $quartiary;
-        }
-        &:focus {
             box-shadow: 0px 0px 5px $quartiary,
                         0px 0px 10px $quartiary,
                         0px 0px 15px $quartiary;
@@ -643,18 +631,14 @@ header {
 
                     &:focus::placeholder {
                         color: $primary;
+                        font-size: 1.3rem;
                     }
             }
 
             &-arrow {
                 font-size: 1.7rem;
                 margin-right: 10px;
-                transform: rotate(180deg);
-                transition: all 0.5s ease;
-
-                &:hover {
-                    transform: rotate(0deg);
-                }
+                transition: all 1s ease;
             }
         }
 
@@ -663,24 +647,19 @@ header {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
-            background-color: $quartiary;
-            color: #fff;
-            // width: auto;
-            // max-width: 667px;
-            // max-height: 397px;
             padding-left: 15px;
             margin-top: -10px;
             line-height: 2.5rem;
-            transition: all 0.5s ease;
-
-            // height: 0;
-            // width: 0;
-            // overflow: hidden;
-
-            // display: none;
             visibility: hidden;
             width: 0;
             height: 0;
+            transition: all 0.5s ease;
+
+            position: absolute;
+            top: 77px;
+            overflow: hidden;
+            background-color: $quartiary;
+            color: #fff;
             z-index: 100;
 
             &-item {
@@ -688,7 +667,6 @@ header {
                 font-size: 1.5rem;
                 list-style-type: none;
                 width: 33%;
-                // padding-bottom: 5px;
                 max-height: 50px;
                 cursor: pointer;
                 
@@ -697,16 +675,6 @@ header {
     }
 }
 
-// .show {
-//     max-width: 667px;
-//     max-height: 397px;
-//     height: unset;
-//     width: unset;
-//     overflow: unset;
-// }
-// .hide {
-//     display: none;
-// }
 
 @keyframes recipeAnim {
     0% {
@@ -732,7 +700,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 25px;
-    // position: absolute;
 
     &__sample {
         width: 380px;
@@ -742,12 +709,10 @@ header {
         border-radius: 5px;
         margin-bottom: 50px;
         transition: all 0.4s ease;
-        transform: translateY() rotate(0deg);
+        transform: translateY(0) rotate(0deg);
         box-shadow: -2px 5px 10px #a39b9b,
                     -2px 5px 20px $primary,
                     -2px 5px 30px $primary;
-
-        
 
         &:hover {
             box-shadow: -7px 10px 10px #a39b9b,
@@ -777,9 +742,6 @@ header {
             border-bottom-left-radius: 5px;
             height: 186px;
             width: 380px;
-            // text-overflow: ellipsis;
-            // overflow: hidden;
-            // white-space: nowrap;
 
             &-title {
                 padding-left: 20px;
@@ -791,13 +753,11 @@ header {
                     @extend .lato400;
                     font-size: 1.5rem;
                     margin-top: 20px;
-                    // margin-bottom: 25px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     width: 70%;
                 }
-
                 
                 .time {
                     @extend .lato700;
@@ -818,22 +778,16 @@ header {
                 flex-direction: row;
                 justify-content: space-between;
                 margin-top: -10px;
-                // width: 55%;
 
                 .details {
                     display: flex;
                     flex-direction: row;
                     height: 15px;
-                    // overflow: hidden;
-                    // text-overflow: ellipsis;
-                    // white-space: nowrap;
-                    // line-height: 0.2;
                 }
 
                 .ingredient {
                     @extend .lato700;
                     padding-left: 20px;
-                    // line-height: 0.1;
                     white-space: nowrap
                 }
 
@@ -847,9 +801,7 @@ header {
                     padding-right: 20px;
                     @extend .roboto400;
                     font-size: 1rem;
-                    font-variation-settings: 'wght' 600;
                     line-height: 1;
-                    // margin-top: 15px;
                     width: 190px;
                     display: -webkit-box;
                     -webkit-line-clamp: 9;
@@ -863,8 +815,10 @@ header {
 
 .error {
     display: none;
+    font-size: 2rem;
+    color: $secondary;
+    @extend .lato700;   
 }
-
-.showError {
-    display: flex;
-}
+ label {
+     display: none;
+ }

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch ./sass/style.scss:css/style.css",
-    "serve": "webpack serve --watch-content-base --liveReload"
+    "serve": "webpack serve --watch --liveReload"
   },
   "repository": {
     "type": "git",
@@ -19,10 +19,11 @@
   },
   "homepage": "https://github.com/Ngc1987/ThomasSemeria_7_02062021#readme",
   "dependencies": {
-    "webpack": "^5.43.0",
-    "webpack-cli": "^4.7.2"
+    "webpack": "^5.43.0"
   },
   "devDependencies": {
+    "eslint": "^7.30.0",
+    "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   }
 }
