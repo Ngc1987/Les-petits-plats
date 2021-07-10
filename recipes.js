@@ -1709,12 +1709,17 @@ recipes.forEach(recipe => {
 
     const title = document.createElement("h2");
     title.innerText = recipe.name;
+    title.setAttribute("tabindex", "0");
+    
     const time = document.createElement("p");
     time.setAttribute("class", "time");
     time.innerHTML = `<i class="far fa-clock"></i><span>${recipe.time} min</span>`;
+    time.setAttribute("tabindex", "0");
+    // time.setAttribute("aria-label", `Temps de préparation ${recipe.time} minutes`);
 
     const instruction = document.createElement("p");
     instruction.setAttribute("class", "instruction");
+    instruction.setAttribute("tabindex", "0");
     instruction.innerHTML = recipe.description;
 
     const ingredientAndQuantity = document.createElement("div");
@@ -1727,8 +1732,12 @@ recipes.forEach(recipe => {
 
         const ingredient = document.createElement("p");
         ingredient.setAttribute("class", "ingredient");
+        ingredient.setAttribute("tabindex", "0");
+        // ingredient.setAttribute("aria-label", aliment.ingredient);
         const quantity = document.createElement("p");
         quantity.setAttribute("class", "quantity");
+        quantity.setAttribute("tabindex", "0");
+        // quantity.setAttribute("aria-label", aliment.quantity);
 
         ingredient.innerHTML = aliment.ingredient;
         quantity.innerHTML = aliment.quantity;
@@ -1987,6 +1996,8 @@ function createNewHtmlTag(tagChoisi, color) {
 
     let deleteButton = document.createElement("i");
     deleteButton.setAttribute("class", "far fa-times-circle");
+    deleteButton.setAttribute("tabindex", "0");
+    deleteButton.setAttribute("aria-label", "Supprimer tag");
 
     tag.appendChild(tagName);
     tag.appendChild(deleteButton);
@@ -2084,6 +2095,7 @@ function showIngredientsInput() {
     Array.from(ingredientsToShowOnIngredientsDiv).forEach(ingredientToShow => {
         const li = document.createElement("li");
         li.setAttribute("class", "filters__ingredients__list-item");
+        li.setAttribute("tabindex", "0");
         li.innerHTML = ingredientToShow;
         ingredientsList.appendChild(li);
     })
@@ -2189,6 +2201,8 @@ document.addEventListener("click", function (e) {
     }
 })
 
+ingredientsInput.addEventListener("focus", hideAppliances);
+ingredientsInput.addEventListener("focus", hideUstensils);
 ingredientsInput.addEventListener("focus", showIngredients);
 ingredientsArrow.addEventListener("click", showIngredients);
 // ingredientsInput.addEventListener("focus", showIngredientsInput);
@@ -2248,6 +2262,8 @@ document.addEventListener("click", function (e) {
     }
 })
 
+appliancesInput.addEventListener("focus", hideIngredients);
+appliancesInput.addEventListener("focus", hideAppliances);
 appliancesInput.addEventListener("focus", showAppliances);
 appliancesArrow.addEventListener("click", showAppliances);
 
@@ -2294,6 +2310,8 @@ function hideUstensils() {
     noRedShadow();
 }
 
+ustensilsInput.addEventListener("focus", hideIngredients);
+ustensilsInput.addEventListener("focus", hideAppliances);
 ustensilsInput.addEventListener("focus", showUstensils);
 ustensilsArrow.addEventListener("click", showUstensils);
 
@@ -2328,6 +2346,7 @@ function searchIngredients() {
 
         const li = document.createElement("li");
         li.setAttribute("class", "filters__ingredients__list-item");
+        li.setAttribute("tabindex", "0");
         li.innerHTML = ingredient;
         ingredientsList.appendChild(li);
     })
@@ -2366,6 +2385,7 @@ function filterIngredients() {
 
         const li = document.createElement("li");
         li.setAttribute("class", "filters__ingredients__list-item");
+        li.setAttribute("tabindex", "0");
         li.innerHTML = ingredient;
         ingredientsList.appendChild(li);
     })
@@ -2389,6 +2409,7 @@ function searchAppliances() {
 
         const li = document.createElement("li");
         li.setAttribute("class", "filters__appareil__list-item");
+        li.setAttribute("tabindex", "0");
         li.innerHTML = appliance;
         appliancesList.appendChild(li);
     })
@@ -2406,6 +2427,7 @@ function filterAppliances() {
 
         const li = document.createElement("li");
         li.setAttribute("class", "filters__appareil__list-item");
+        li.setAttribute("tabindex", "0");
         li.innerHTML = appliance;
         appliancesList.appendChild(li);
     })
@@ -2449,6 +2471,7 @@ function searchUstensils() {
 
         const li = document.createElement("li");
         li.setAttribute("class", "filters__ustensiles__list-item");
+        li.setAttribute("tabindex", "0");
         li.innerHTML = ustensil;
         ustensilsList.appendChild(li);
     })
@@ -2470,6 +2493,7 @@ function filterUstensils() {
 
         const li = document.createElement("li");
         li.setAttribute("class", "filters__ustensiles__list-item");
+        li.setAttribute("tabindex", "0");
         li.innerHTML = ustensil;
         ustensilsList.appendChild(li);
     })

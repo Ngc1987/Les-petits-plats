@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 :root {
   font-size: 12px;
 }
@@ -41,9 +42,30 @@ header {
 }
 
 #logo {
-  background: url(../svg/logo.svg) center center no-repeat;
-  width: 268px;
-  height: 93px;
+  background: url(../svg/minilogo.svg) center center no-repeat;
+  width: 52px;
+  height: 47px;
+  margin: 0;
+}
+
+#logoLink {
+  width: 300px;
+  height: 150px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: -70px;
+  color: #d04f4f;
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 3rem;
 }
 
 .search {
@@ -288,6 +310,22 @@ header {
   box-shadow: 0px 0px 5px #3282f7, 0px 0px 10px #3282f7, 0px 0px 15px #3282f7;
 }
 
+.greenShadow {
+  box-shadow: 0px 0px 5px #68d9a4, 0px 0px 10px #68d9a4, 0px 0px 15px #68d9a4;
+}
+
+.redShadow {
+  box-shadow: 0px 0px 5px #ed6454, 0px 0px 10px #ed6454, 0px 0px 15px #ed6454;
+}
+
+.openArrow {
+  transform: rotate(0deg);
+}
+
+.closeArrow {
+  transform: rotate(180deg);
+}
+
 .filters {
   margin-top: 20px;
   display: flex;
@@ -344,11 +382,7 @@ header {
 .filters__ingredients__head-arrow {
   font-size: 1.7rem;
   margin-right: 10px;
-  transform: rotate(180deg);
-  transition: all 0.5s ease;
-}
-.filters__ingredients__head-arrow:hover {
-  transform: rotate(0deg);
+  transition: all 1s ease;
 }
 .filters__ingredients__list {
   display: flex;
@@ -384,16 +418,14 @@ header {
   color: #fff;
   display: flex;
   flex-direction: column;
-  height: max-content;
   width: auto;
-  margin-left: 20px;
+  height: max-content;
+  cursor: pointer;
   transition: all 0.4s ease;
-  overflow: hidden;
+  margin-left: 20px;
+  position: relative;
 }
 .filters__appareil:hover {
-  box-shadow: 0px 0px 5px #68d9a4, 0px 0px 10px #68d9a4, 0px 0px 15px #68d9a4;
-}
-.filters__appareil:focus {
   box-shadow: 0px 0px 5px #68d9a4, 0px 0px 10px #68d9a4, 0px 0px 15px #68d9a4;
 }
 .filters__appareil__head {
@@ -424,15 +456,12 @@ header {
 }
 .filters__appareil__head-input:focus::placeholder {
   color: #e7e7e7;
+  font-size: 1.3rem;
 }
 .filters__appareil__head-arrow {
   font-size: 1.7rem;
   margin-right: 10px;
-  transform: rotate(180deg);
-  transition: all 0.5s ease;
-}
-.filters__appareil__head-arrow:hover {
-  transform: rotate(0deg);
+  transition: all 1s ease;
 }
 .filters__appareil__list {
   display: flex;
@@ -446,6 +475,10 @@ header {
   width: 0;
   height: 0;
   transition: all 0.5s;
+  position: absolute;
+  top: 77px;
+  overflow: hidden;
+  background-color: #68d9a4;
   z-index: 100;
 }
 .filters__appareil__list-item {
@@ -461,16 +494,13 @@ header {
   color: #fff;
   display: flex;
   flex-direction: column;
-  height: max-content;
   width: auto;
+  height: max-content;
   margin-left: 20px;
   transition: all 0.4s ease;
-  overflow: hidden;
+  position: relative;
 }
 .filters__ustensiles:hover {
-  box-shadow: 0px 0px 5px #ed6454, 0px 0px 10px #ed6454, 0px 0px 15px #ed6454;
-}
-.filters__ustensiles:focus {
   box-shadow: 0px 0px 5px #ed6454, 0px 0px 10px #ed6454, 0px 0px 15px #ed6454;
 }
 .filters__ustensiles__head {
@@ -501,30 +531,30 @@ header {
 }
 .filters__ustensiles__head-input:focus::placeholder {
   color: #e7e7e7;
+  font-size: 1.3rem;
 }
 .filters__ustensiles__head-arrow {
   font-size: 1.7rem;
   margin-right: 10px;
-  transform: rotate(180deg);
-  transition: all 0.5s ease;
-}
-.filters__ustensiles__head-arrow:hover {
-  transform: rotate(0deg);
+  transition: all 1s ease;
 }
 .filters__ustensiles__list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #ed6454;
-  color: #fff;
   padding-left: 15px;
   margin-top: -10px;
   line-height: 2.5rem;
-  transition: all 0.5s ease;
   visibility: hidden;
   width: 0;
   height: 0;
+  transition: all 0.5s ease;
+  position: absolute;
+  top: 77px;
+  overflow: hidden;
+  background-color: #ed6454;
+  color: #fff;
   z-index: 100;
 }
 .filters__ustensiles__list-item {
@@ -566,7 +596,7 @@ header {
   border-radius: 5px;
   margin-bottom: 50px;
   transition: all 0.4s ease;
-  transform: translateY() rotate(0deg);
+  transform: translateY(0) rotate(0deg);
   box-shadow: -2px 5px 10px #a39b9b, -2px 5px 20px #e7e7e7, -2px 5px 30px #e7e7e7;
 }
 .recipes__sample:hover {
@@ -636,7 +666,6 @@ header {
 .recipes__sample__foot-details .instruction {
   padding-right: 20px;
   font-size: 1rem;
-  font-variation-settings: "wght" 600;
   line-height: 1;
   width: 190px;
   display: -webkit-box;
@@ -649,6 +678,10 @@ header {
   display: none;
   font-size: 2rem;
   color: #3282f7;
+}
+
+label {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
