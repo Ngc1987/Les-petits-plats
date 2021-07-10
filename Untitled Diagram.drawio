@@ -1,144 +1,121 @@
-<mxfile host="app.diagrams.net" modified="2021-06-29T16:54:28.623Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="Sjp2TKLqGWNPCSuOXaqi" version="14.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-10T14:10:01.479Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="rJu0x1ZOTFInv8Pw7yd3" version="14.8.5" type="github">
   <diagram id="xSrLjS2qFE7dPZKFVFYC" name="Page-1">
-    <mxGraphModel dx="1102" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="627" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-2" value="Rien ne change, la totalité des recettes sont affichées" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="60" y="30" width="120" height="60" as="geometry" />
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-1" value="L&#39;utilisateur a saisi 3 caractères ou plus" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="120" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-3" value="" style="endArrow=classic;html=1;" parent="1" target="DtRh-H-SdKxsgD-GIzvi-2" edge="1">
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-2" value="Aucune recette n&#39;apparaît, à la place un message s&#39;affiche pour conseiller une nouvelle recherche à l&#39;utilisateur" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="200" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-3" value="Oui" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="335" y="220" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-4" value="" style="endArrow=classic;html=1;entryX=0.54;entryY=1.023;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Udx3_ySryYnURsQ5QhjF-11">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="350" y="59" as="sourcePoint" />
-            <mxPoint x="270" y="59" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-7" value="Non" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="250" y="30" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-8" value="Oui&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="380" y="120" width="30" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-12" value="&lt;span&gt;L&#39;utilisateur tape 3 lettres ou plus dans l&#39;input principal&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="353.5" y="30" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-14" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="414" y="95" as="sourcePoint" />
-            <mxPoint x="414" y="185" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-15" value="&lt;span&gt;Les recettes sont filtrées, la valeur saisie dans le champs de recherche, est inclus dans le titre, la description, ou les ingrédients d&#39;une ou plusieurs recettes?&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="329" y="190" width="170" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-16" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="510" y="270" as="sourcePoint" />
-            <mxPoint x="620" y="170" as="targetPoint" />
+            <mxPoint x="380.84000000000015" y="550" as="sourcePoint" />
+            <mxPoint x="379.99999999999994" y="717.8299999999999" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="600" y="190" />
+              <mxPoint x="381" y="600" />
+              <mxPoint x="585" y="600" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-17" value="Aucune recette n&#39;est affichée, un message d&#39;erreur apparaît en lieu et place pour suggérer à l&#39;utilisateur une nouvelle recherche" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="600" y="70" width="200" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-19" value="Non&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="570" y="210" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-20" value="Les recettes sont filtrées. Les champs de recherche avancée sont mis à jour avec les ingrédients, appareils et ustensiles compris dans les recettes restantes sur la page." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="328" y="450" width="171" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-21" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-5" value="" style="endArrow=classic;html=1;exitX=-0.032;exitY=0.483;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.486;entryY=-0.026;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Udx3_ySryYnURsQ5QhjF-1" target="Udx3_ySryYnURsQ5QhjF-7">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="410" y="370" as="sourcePoint" />
-            <mxPoint x="410" y="440" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-22" value="Oui" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="415" y="400" width="30" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-23" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="DtRh-H-SdKxsgD-GIzvi-20" target="DtRh-H-SdKxsgD-GIzvi-24" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="409.5" y="620" as="sourcePoint" />
-            <mxPoint x="409" y="600" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-24" value="L&#39;utilisateur précise sa recette en ajoutant un tag à l&#39;aide des champs de recherche avancée ?" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="329" y="700" width="170" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-25" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="DtRh-H-SdKxsgD-GIzvi-24" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="520" y="670" as="sourcePoint" />
-            <mxPoint x="500" y="520" as="targetPoint" />
+            <mxPoint x="80" y="200" as="sourcePoint" />
+            <mxPoint x="90" y="220" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="570" y="735" />
-              <mxPoint x="570" y="520" />
+              <mxPoint x="98" y="149" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-26" value="Oui" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="520" y="740" width="30" height="20" as="geometry" />
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-6" value="Non" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="150" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-27" value="Un tag est ajouté, et garde dans la liste des résultats de recherche les recettes comprenant en plus des recherches précédentes le tag choisi dans ses ingrédients, appareils ou ustensiles" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="530" y="560" width="170" height="140" as="geometry" />
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-7" value="&lt;span&gt;Toutes les recettes restent affichées.&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-30" value="L&#39;utilisateur choisit sa recette parmis celle ou celles restantes" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="560" y="840" width="220" height="60" as="geometry" />
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-8" value="La recette contient dans son titre, ses ingrédients ou sa description la valeur saisie dans l&#39;input par l&#39;utilisateur?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="460" width="140" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-31" value="" style="endArrow=classic;html=1;exitX=0.847;exitY=1.014;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="DtRh-H-SdKxsgD-GIzvi-24" target="DtRh-H-SdKxsgD-GIzvi-30" edge="1">
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-9" value="" style="endArrow=none;html=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="1020" as="sourcePoint" />
-            <mxPoint x="450" y="970" as="targetPoint" />
+            <mxPoint x="339.40999999999985" y="460" as="sourcePoint" />
+            <mxPoint x="339.40999999999985" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-10" value="La recette renvoie &quot;true&quot; et reste dans les résultats de recherche." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-11" value="La recette renvoie &quot;false&quot; et disparaît des résultats de recherche." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-12" value="&lt;span&gt;La fonction se lance.&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Elle vérifie si la valeur saisie dans l&#39;input par l&#39;utilisateur est présente dans le titre, les ingrédients ou la description de chaque recette.&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="268" y="280" width="146" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-13" value="Toutes les recettes renvoient &quot;true&quot; ?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-14" value="Toutes les recettes renvoient &quot;false&quot; ?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-15" value="" style="endArrow=classic;html=1;exitX=0.203;exitY=1.015;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Udx3_ySryYnURsQ5QhjF-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="670" as="sourcePoint" />
+            <mxPoint x="100" y="550" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="473" y="870" />
+              <mxPoint x="298" y="600" />
+              <mxPoint x="100" y="600" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="DtRh-H-SdKxsgD-GIzvi-32" value="Non" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="480" y="850" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="ugbwr2Fw3sZeb2NP609N-1" value="L&#39;utilisateur supprime tous&amp;nbsp;les tags de recherche" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="150" y="540" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ugbwr2Fw3sZeb2NP609N-3" value="L&#39;utilisateur supprime un tag de recherche" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="150" y="450" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ugbwr2Fw3sZeb2NP609N-4" value="" style="endArrow=none;html=1;entryX=0;entryY=0.2;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="DtRh-H-SdKxsgD-GIzvi-20">
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-16" value="" style="endArrow=classic;html=1;entryX=0.496;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Udx3_ySryYnURsQ5QhjF-7">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="270" y="480" as="sourcePoint" />
-            <mxPoint x="320" y="430" as="targetPoint" />
+            <mxPoint x="99.41000000000008" y="360" as="sourcePoint" />
+            <mxPoint x="99.41" y="290" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ugbwr2Fw3sZeb2NP609N-5" value="" style="endArrow=none;html=1;entryX=-0.018;entryY=0.8;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="DtRh-H-SdKxsgD-GIzvi-20">
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-17" value="" style="endArrow=classic;html=1;exitX=0.496;exitY=-0.007;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Udx3_ySryYnURsQ5QhjF-14">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="270" y="570" as="sourcePoint" />
-            <mxPoint x="320" y="520" as="targetPoint" />
+            <mxPoint x="579.41" y="350" as="sourcePoint" />
+            <mxPoint x="579.4099999999999" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ugbwr2Fw3sZeb2NP609N-6" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ugbwr2Fw3sZeb2NP609N-1">
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-18" value="Non" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="580" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-19" value="Oui" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="175" y="580" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-20" value="Non" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="540" y="310" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-21" value="" style="endArrow=none;html=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="30" y="540" as="sourcePoint" />
-            <mxPoint x="110" y="90" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="110" y="570" />
-            </Array>
+            <mxPoint x="578.8199999999999" y="490" as="sourcePoint" />
+            <mxPoint x="578.8199999999999" y="420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ugbwr2Fw3sZeb2NP609N-7" value="Oui" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="85" y="500" width="30" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="ugbwr2Fw3sZeb2NP609N-8" value="" style="endArrow=classic;html=1;entryX=0.006;entryY=0.529;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="DtRh-H-SdKxsgD-GIzvi-15">
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-22" value="" style="endArrow=none;html=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="200" y="450" as="sourcePoint" />
-            <mxPoint x="250" y="400" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="200" y="280" />
-            </Array>
+            <mxPoint x="99.41000000000008" y="490" as="sourcePoint" />
+            <mxPoint x="99.41000000000008" y="420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ugbwr2Fw3sZeb2NP609N-11" value="Oui" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="195" y="360" width="30" height="20" as="geometry" />
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-23" value="Oui" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="105" y="320" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-24" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="339.40999999999985" y="180" as="sourcePoint" />
+            <mxPoint x="339.40999999999985" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Udx3_ySryYnURsQ5QhjF-25" value="&lt;span style=&quot;font-size: 25px&quot;&gt;Diagramme algorithme 1&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="195" y="40" width="290" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
