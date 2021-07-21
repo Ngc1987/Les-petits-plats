@@ -2160,14 +2160,16 @@ function showIngredients() {
     ustensilsList.style.height = "0";
     ustensilsList.style.visibility = "hidden";
 
-    ingredientsInputHead.classList.remove("inputClose");
-    ingredientsInputHead.classList.add("inputOpen");
+    ingredientsInputHead.classList.remove("inputHeadClose");
+    ingredientsInputHead.classList.add("inputHeadOpen");
 
     ingredientsList.style.boxShadow = "0px 0px 5px #3282f7,0px 0px 10px #3282f7,0px 0px 15px #3282f7";
     ingredientsList.classList.remove("animClose");
     ingredientsList.classList.add("animOpen");
 
     ingredientsInput.setAttribute("placeholder", "Rechercher un ingrédient");
+    ingredientsInput.classList.add("inputOpen");
+    ingredientsInput.classList.remove("inputClose");
 
     ingredientsArrow.classList.remove("closeArrow");
     ingredientsArrow.classList.add("openArrow");
@@ -2176,13 +2178,15 @@ function showIngredients() {
 }
 
 function hideIngredients() {
-    ingredientsInputHead.classList.remove("inputOpen");
-    ingredientsInputHead.classList.add("inputClose");
+    ingredientsInputHead.classList.remove("inputHeadOpen");
+    ingredientsInputHead.classList.add("inputHeadClose");
 
     ingredientsList.classList.remove("animOpen");
     ingredientsList.classList.add("animClose");
 
     ingredientsInput.setAttribute("placeholder", "Ingrédients");
+    ingredientsInput.classList.remove("inputOpen");
+    ingredientsInput.classList.add("inputClose");
 
     ingredientsArrow.classList.remove("openArrow");
     ingredientsArrow.classList.add("closeArrow");
@@ -2205,8 +2209,6 @@ ingredientsInput.addEventListener("focus", hideAppliances);
 ingredientsInput.addEventListener("focus", hideUstensils);
 ingredientsInput.addEventListener("focus", showIngredients);
 ingredientsArrow.addEventListener("click", showIngredients);
-// ingredientsInput.addEventListener("focus", showIngredientsInput);
-// ingredientsArrow.addEventListener("click", showIngredientsInput);
 
 // *******************************************************************************
 // ******** Ouverture et fermeture champs de recherche avancée Appareils *********
@@ -2221,14 +2223,16 @@ function showAppliances() {
     ustensilsList.style.height = "0";
     ustensilsList.style.visibility = "hidden";
 
-    appliancesInputHead.classList.remove("inputClose");
-    appliancesInputHead.classList.add("inputOpen");
+    appliancesInputHead.classList.remove("inputHeadClose");
+    appliancesInputHead.classList.add("inputHeadOpen");
 
     appliancesList.style.boxShadow = "0px 0px 5px #68d9a4,0px 0px 10px #68d9a4,0px 0px 15px #68d9a4";
     appliancesList.classList.remove("animClose");
     appliancesList.classList.add("animOpen");
 
     appliancesInput.setAttribute("placeholder", "Rechercher un appareil");
+    appliancesInput.classList.add("inputOpen");
+    appliancesInput.classList.remove("inputClose");
 
     appliancesArrow.classList.remove("closeArrow");
     appliancesArrow.classList.add("openArrow");
@@ -2237,13 +2241,15 @@ function showAppliances() {
 }
 
 function hideAppliances() {
-    appliancesInputHead.classList.remove("inputOpen");
-    appliancesInputHead.classList.add("inputClose");
+    appliancesInputHead.classList.remove("inputHeadOpen");
+    appliancesInputHead.classList.add("inputHeadClose");
 
     appliancesList.classList.remove("animOpen");
     appliancesList.classList.add("animClose");
 
     appliancesInput.setAttribute("placeholder", "Appareils");
+    appliancesInput.classList.remove("inputOpen");
+    appliancesInput.classList.add("inputClose");
 
     appliancesArrow.classList.remove("openArrow");
     appliancesArrow.classList.add("closeArrow");
@@ -2280,14 +2286,16 @@ function showUstensils() {
     appliancesList.style.height = "0";
     appliancesList.style.visibility = "hidden";
 
-    ustensilsInputHead.classList.remove("inputClose");
-    ustensilsInputHead.classList.add("inputOpen");
+    ustensilsInputHead.classList.remove("inputHeadClose");
+    ustensilsInputHead.classList.add("inputHeadOpen");
 
     ustensilsList.style.boxShadow = "0px 0px 5px #ed6454,0px 0px 10px #ed6454,0px 0px 15px #ed6454";
     ustensilsList.classList.remove("animClose");
     ustensilsList.classList.add("animOpen");
 
     ustensilsInput.setAttribute("placeholder", "Rechercher un ustensile");
+    ustensilsInput.classList.add("inputOpen");
+    ustensilsInput.classList.remove("inputClose");
 
     ustensilsArrow.classList.remove("closeArrow");
     ustensilsArrow.classList.add("openArrow");
@@ -2296,13 +2304,15 @@ function showUstensils() {
 }
 
 function hideUstensils() {
-    ustensilsInputHead.classList.remove("inputOpen");
-    ustensilsInputHead.classList.add("inputClose");
+    ustensilsInputHead.classList.remove("inputHeadOpen");
+    ustensilsInputHead.classList.add("inputHeadClose");
 
     ustensilsList.classList.remove("animOpen");
     ustensilsList.classList.add("animClose");
 
     ustensilsInput.setAttribute("placeholder", "Ustensiles");
+    ustensilsInput.classList.remove("inputOpen");
+    ustensilsInput.classList.add("inputClose");
 
     ustensilsArrow.classList.remove("openArrow");
     ustensilsArrow.classList.add("closeArrow");

@@ -51,6 +51,7 @@ header {
 #logoLink {
     width: 300px;
     height: 150px;
+    margin-top: -50px;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -121,7 +122,10 @@ h1 {
 
 @keyframes inputOpen {
     0% {
-        width: 170px;
+        width: 130px;
+    }
+    90% {
+        width: 130px;
     }
     100% {
         width: 662px;
@@ -133,6 +137,31 @@ h1 {
 }
 
 @keyframes inputClose {
+    0% {
+        width: 662px;
+    }
+    100% {
+        width: 130px;
+    }
+}
+.inputHeadOpen {
+    animation: inputHeadOpen 0.4s forwards;
+}
+
+@keyframes inputHeadOpen {
+    0% {
+        width: 170px;
+    }
+    100% {
+        width: 662px;
+    }
+}
+
+.inputHeadClose {
+    animation: inputHeadClose 0.7s forwards;
+}
+
+@keyframes inputHeadClose {
     0% {
         width: 662px;
     }
