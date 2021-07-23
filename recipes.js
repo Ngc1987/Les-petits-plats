@@ -2001,7 +2001,7 @@ function createNewHtmlTag(tagChoisi, color) {
     tag.appendChild(deleteButton);
     tagList.appendChild(tag);
 
-    input.value = "";
+    // input.value = "";
 
     deleteButton.addEventListener("click", deleteTag)
 
