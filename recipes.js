@@ -1724,29 +1724,41 @@ recipes.forEach(recipe => {
 
     const ingredientAndQuantity = document.createElement("div");
     ingredientAndQuantity.setAttribute("class", "ingredientAndQuantity");
+    const details = document.createElement("ul");
+    details.setAttribute("class", "details");
 
     recipe.ingredients.forEach(aliment => {
 
-        const details = document.createElement("div");
-        details.setAttribute("class", "details");
 
-        const ingredient = document.createElement("p");
+        const ingredient = document.createElement("li");
         ingredient.setAttribute("class", "ingredient");
         ingredient.setAttribute("tabindex", "0");
         // ingredient.setAttribute("aria-label", aliment.ingredient);
-        const quantity = document.createElement("p");
+        const quantity = document.createElement("span");
         quantity.setAttribute("class", "quantity");
-        quantity.setAttribute("tabindex", "0");
+        // quantity.setAttribute("tabindex", "0");
         // quantity.setAttribute("aria-label", aliment.quantity);
+        // const unit = document.createElement("p");
+        // unit.setAttribute("class", "unit");
+        // unit.setAttribute("tabindex", "0");
+        // quantity.setAttribute("aria-label", `${aliment.quantity} ${aliment.unit}`);
 
         ingredient.innerHTML = aliment.ingredient;
-        quantity.innerHTML = aliment.quantity;
-
-        if (aliment.quantity == undefined) {
-            quantity.innerHTML = "";
+        // unit.innerText = aliment.unit;
+        
+        if (aliment.quantity === undefined) {
+            aliment.quantity = "";
         }
+        if (aliment.unit === undefined) {
+            aliment.unit = "";
+        }
+        quantity.innerHTML = `${aliment.quantity} ${aliment.unit}`;
+        // if (aliment.unit === "grammes" || aliment.unit === "gramme") {
+        //     aliment.unit = "gr";
+        // }
+        ingredient.appendChild(quantity);
         details.appendChild(ingredient);
-        details.appendChild(quantity);
+        // details.appendChild(unit);
         ingredientAndQuantity.appendChild(details);
     })
 
@@ -1997,13 +2009,13 @@ function createNewHtmlTag(tagChoisi, color) {
     let deleteButton = document.createElement("i");
     deleteButton.setAttribute("class", "far fa-times-circle");
     deleteButton.setAttribute("tabindex", "0");
-    deleteButton.setAttribute("aria-label", "Supprimer tag");
+    deleteButton.setAttribute("aria-label", `Supprimer le tag ${tagChoisi}`);
 
     tag.appendChild(tagName);
     tag.appendChild(deleteButton);
     tagList.appendChild(tag);
 
-    input.value = "";
+    // input.value = "";
 
     deleteButton.addEventListener("click", deleteTag)
 

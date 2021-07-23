@@ -15,7 +15,7 @@
   font-weight: 700;
 }
 
-.lato400, .recipes__sample__foot-details .quantity, .recipes__sample__foot-title h2, .filters__ustensiles__list-item, .filters__appareil__list-item, .filters__ingredients__list-item, .search__input {
+.lato400, .recipes__sample__foot-details .unit, .recipes__sample__foot-details .quantity, .recipes__sample__foot-title h2, .filters__ustensiles__list-item, .filters__appareil__list-item, .filters__ingredients__list-item, .search__input {
   font-family: lato;
   font-weight: 400;
 }
@@ -678,18 +678,27 @@ h1 {
   justify-content: space-between;
   margin-top: -10px;
 }
+.recipes__sample__foot-details .ingredientAndQuantity {
+  display: list-item;
+  list-style-type: none;
+}
 .recipes__sample__foot-details .details {
-  display: flex;
-  flex-direction: row;
+  list-style-type: none;
+  list-style-position: inside;
   height: 15px;
 }
 .recipes__sample__foot-details .ingredient {
-  padding-left: 20px;
+  list-style-position: outside;
+  margin-left: -20px;
+  margin-top: -3px;
   white-space: nowrap;
 }
 .recipes__sample__foot-details .quantity {
   margin-left: 3px;
   margin-right: 10px;
+}
+.recipes__sample__foot-details .unit {
+  margin-left: -5px;
 }
 .recipes__sample__foot-details .instruction {
   padding-right: 20px;
