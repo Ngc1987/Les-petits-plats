@@ -18,11 +18,12 @@ const recipes = [{
         },
         {
             "ingredient": "Sucre",
-            "quantite": 30,
+            "quantity": 30,
             "unit": "grammes"
         },
         {
-            "ingredient": "Glaçons"
+            "ingredient": "Glaçons",
+            "quantity": 3
         }
     ],
     "time": 10,
@@ -49,7 +50,7 @@ const recipes = [{
         },
         {
             "ingredient": "Carotte",
-            "quantite": 1
+            "quantity": 1
         },
         {
             "ingredient": "Citron Vert",
@@ -1716,28 +1717,30 @@ recipes.forEach(recipe => {
 
     const ingredientAndQuantity = document.createElement("div");
     ingredientAndQuantity.setAttribute("class", "ingredientAndQuantity");
+    const details = document.createElement("ul");
+    details.setAttribute("class", "details");
 
     recipe.ingredients.forEach(aliment => {
 
-        const details = document.createElement("div");
-        details.setAttribute("class", "details");
 
-        const ingredient = document.createElement("p");
+        const ingredient = document.createElement("li");
         ingredient.setAttribute("class", "ingredient");
         ingredient.setAttribute("tabindex", "0");
-
-        const quantity = document.createElement("p");
+        const quantity = document.createElement("span");
         quantity.setAttribute("class", "quantity");
-        quantity.setAttribute("tabindex", "0");
 
         ingredient.innerHTML = aliment.ingredient;
-        quantity.innerHTML = aliment.quantity;
-
-        if (aliment.quantity == undefined) {
-            quantity.innerHTML = "";
+        
+        if (aliment.quantity === undefined) {
+            aliment.quantity = "";
         }
+        if (aliment.unit === undefined) {
+            aliment.unit = "";
+        }
+        quantity.innerHTML = `${aliment.quantity} ${aliment.unit}`;
+
+        ingredient.appendChild(quantity);
         details.appendChild(ingredient);
-        details.appendChild(quantity);
         ingredientAndQuantity.appendChild(details);
     })
 

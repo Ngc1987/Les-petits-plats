@@ -807,15 +807,22 @@ h1 {
                 justify-content: space-between;
                 margin-top: -10px;
 
-                .details {
-                    display: flex;
-                    flex-direction: row;
-                    height: 15px;
+                .ingredientAndQuantity {
+                    display: list-item;
+                    list-style-type: none;
                 }
 
+                .details {
+                    list-style-type: none;
+                    list-style-position: inside;
+                    height: 15px;
+                }
+                
                 .ingredient {
                     @extend .lato700;
-                    padding-left: 20px;
+                    list-style-position: outside;
+                    margin-left: -20px;
+                    margin-top: -3px;
                     white-space: nowrap
                 }
 
@@ -823,6 +830,11 @@ h1 {
                     @extend .lato400;
                     margin-left: 3px;
                     margin-right: 10px;
+                }
+
+                .unit {
+                    margin-left: -5px;
+                    @extend .lato400;
                 }
 
                 .instruction {
